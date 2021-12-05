@@ -1,0 +1,52 @@
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.bg-green{
+    background-image: linear-gradient(45deg, #598901, #2D5A00);
+    background-color: #598901;
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+}
+
+.bg-blue{
+    background-color: #323c6d;
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+}
+
+.btn-blue{
+    background-color: #5777ba !important;
+    border-color: #5777ba !important;
+    color: #fff !important;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.form-control{
+    background: rgba(151, 151, 151, 0.5) !important;
+    border: 1px solid rgba(0,0,0,0.3) !important;
+    color: #fff !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,0,0,0.03) !important;
+}
+
+main{
+    min-width: 300px;
+}

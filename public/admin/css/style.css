@@ -1,0 +1,45 @@
+.bg-blue{
+    
+    background-color: #323c6d;
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+}
+
+.fat-content-small{
+    padding-left: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+}
+
+.mh-130{
+    min-height: 130px;
+}
+
+a.collapse-item{
+    color: #999 !important;
+}
+a.collapse-item:hover{
+    color: black !important;
+}
+a.collapse-item.active{
+    background-color: #eaecf4;
+    color: black !important;
+    font-weight: normal;
+}
+
+@media (min-width: 768px){
+    .sidebar .nav-item .nav-link i {
+        font-size: 1.85rem;
+    }
+
+    .sidebar .nav-item .nav-link span {
+        font-size: 1.15rem;
+    }
+
+    .sidebar .nav-item .nav-link {
+        padding: 1.9rem;
+    }
+}
