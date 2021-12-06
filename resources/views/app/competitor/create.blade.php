@@ -49,7 +49,7 @@
               <div class="alert alert-info mt-3 text-center">
                 <h4><i class="fa fa-file-word"></i></h4>
                 <strong>Guide Book Lomba</strong> <br>
-                <a href="/dokumen/Booklet_COMIC_9.pdf" target="_blank" class="btn btn-info mt-2 btn-sm">Download</a>
+                <a href="{{asset('dokumen/Booklet_COMIC_X.pdf')}}" target="_blank" class="btn btn-info mt-2 btn-sm">Download</a>
 
               </div>
               

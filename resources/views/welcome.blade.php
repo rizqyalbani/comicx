@@ -78,7 +78,7 @@
   </div>
 </div>
 <!--event info -->
-<section class="pt200 pb100 mt-75" style="background-color: #191919"  id="more">
+<section class="pt100 pb100 mt-75" style="background-color: #191919"  id="more">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6 col-md-3  ">
@@ -89,7 +89,7 @@
                           <b>Tanggal Pelaksanaan</b>
                         </h5>
                         <p>
-                            14 Februari 2021
+                            20 Februari 2022
                         </p>
                     </div>
                 </div>
@@ -189,7 +189,7 @@
             <h3 class="title">
                Jenis Lomba COMIC IX
             </h3>
-            <a target="_blank" href="/dokumen/Booklet_COMIC_9.pdf" class=" btn btn-primary btn-rounded">
+            <a target="_blank" href="{{asset('dokumen/Booklet_COMIC_X.pdf')}}" class=" btn btn-primary btn-rounded">
                 Download Booklet Perlombaan
             </a>
         </div>
@@ -272,33 +272,33 @@
         </div>
         <div class="row">
             <div class="pt20 col-md-12 text-center">
-                <img src="/assets/img/pendaftaran-comic.svg" class="m-auto" style="width: 100px; height: 100px"  alt="event">
-                <h5 class="mt-3" style="color: #fff">Pendaftaran Peserta</h5>
-                <span style="display: block">25 November 2020 - 5 Februari 2021</span>
-                <img src="/assets/img/customIcon/Arrow-down.svg" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <img src="{{asset('assets/img/pendaftaran-comic.svg')}}" class="m-auto" style="width: 100px; height: 100px"  alt="event">
+                <h5 class="mt-3" style="color: #fff">Pendaftaran Online</h5>
+                <span style="display: block">06 Desember 2021 - 06 Februari 2022</span>
+                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">
             <div class="pt20 col-md-12 text-center">
-                <img src="/assets/img/tm-comic.svg" class="m-auto" style="width: 90px; height: 90px" alt="event">
+                <img src="{{asset('assets/img/tm-comic.svg')}}" class="m-auto" style="width: 90px; height: 90px" alt="event">
                 <h5 class="mt-3" style="color: #fff">Technical Meeting</h5>
-                <span style="display: block">6 Februari 2021</span>
-                <img src="/assets/img/customIcon/Arrow-down.svg" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <span style="display: block">Ahad, 13 Februari 2022</span>
+                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">
             <div class="pt20 col-md-12 text-center">
-                <img src="/assets/img/upload-comic.svg" style="width: 100px; height: 100px" class="m-auto" alt="event">
-                <h5 class="mt-3" style="color: #fff">Upload Karya</h5>
-                <span style="display: block">11-12 Februari 2021</span>
-                <img src="/assets/img/customIcon/Arrow-down.svg" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <img src="{{asset('assets/img/upload-comic.svg')}}" style="width: 100px; height: 100px" class="m-auto" alt="event">
+                <h5 class="mt-3" style="color: #fff">Pengumpulan Karya</h5>
+                <span style="display: block">Kamis, 17 Februari 2022</span>
+                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">
             <div class="pt20 col-md-12 text-center">
-                <img src="/assets/img/comic-x.png" class="m-auto" style="width: 120px; height: 100px" alt="event">
-                <h5 class="mt-3" style="color: #fff">Penjurian dan Pengumuman</h5>
-                <span>14 Februari 2021</span>
+                <img src="{{asset('assets/img/comic-x.png')}}" class="m-auto" style="width: 120px; height: 100px" alt="event">
+                <h5 class="mt-3" style="color: #fff">Puncak Acara & Pengumuman Juara</h5>
+                <span>Ahad, 20 Februari 2022</span>
             </div>
         </div>
         {{-- <div class="table-responsive">

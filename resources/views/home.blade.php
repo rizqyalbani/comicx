@@ -108,17 +108,24 @@
       <div class="card-body text-gray-800">
         <div class="h5 mb-0 font-weight-bold text-gray-800">Kontak Kami</div>
         <hr>
-        <b>Tiwi Anjelina</b> <br>
+        <b>Sabil</b> <br>
         <small>
-          <a href="http://wa.me/6281907776388" target="_blank" class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px;background: #5cc762; border-color: #5cc762;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="http://line.me/ti/p/~anjelinatiwi" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px; background: #53b42d; border-color: #53b42d;"><i class="fab fa-line"></i> Line</a>
+          <a href="http://wa.me/6281529039723" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px;background: #5cc762; border-color: #5cc762;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="http://line.me/ti/p/~sabilaquar" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px; background: #53b42d; border-color: #53b42d;"><i class="fab fa-line"></i> Line</a>
         </small>
         <hr>
-        <b>Fauzan</b> <br>
+        <b>Anggita</b> <br>
         <small>
-          <a href="http://wa.me/62895369034019" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px;background: #5cc762; border-color: #5cc762;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-          <a href="http://line.me/ti/p/~fauzanadhin" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px; background: #53b42d; border-color: #53b42d;"><i class="fab fa-line"></i> Line</a>
+          <a href="http://wa.me/6285330096712" target="_blank" class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px;background: #5cc762; border-color: #5cc762;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="http://line.me/ti/p/~4nggita01" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px; background: #53b42d; border-color: #53b42d;"><i class="fab fa-line"></i> Line</a>
         </small>
+        <hr>
+        <b>Erla</b> <br>
+        <small>
+          <a href="http://wa.me/6287897362113" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px;background: #5cc762; border-color: #5cc762;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+          <a href="http://line.me/ti/p/~erlaayuu" target="_blank"  class="btn btn-success btn-sm mt-1 mr-1" style="font-size: 12px; background: #53b42d; border-color: #53b42d;"><i class="fab fa-line"></i> Line</a>
+        </small>
+        
       </div>
     </div>
   </div>

@@ -167,17 +167,24 @@
                     </div>
                     <div class="footer_box_body">
                         <h5 class="contact_person">
-                            Anggita <br> 
+                            Sabil <br> 
                             <p class="contact_person_numbers">
-                                <i class="ion-android-call"></i> <a href="http://wa.me/6285330096712" target="_blank" rel="noopener noreferrer">085330096712</a> <br>
-                                <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~anjelinatiwi" target="_blank">@anjelinatiwi</a> (LINE)
+                                <i class="ion-android-call"></i><a href="http://wa.me/6281529039723" target="_blank" rel="noopener noreferrer">081529039723</a> <br>
+                                <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~sabilquar" target="_blank">@sabilquar</a> (LINE)
                             </p>
                         </h5>
                         <h5 class="contact_person">
-                            Sabil <br> 
+                            Anggita <br> 
                             <p class="contact_person_numbers">
-                                <i class="ion-android-call"></i><a href="http://wa.me/6281529039723" target="_blank" rel="noopener noreferrer"></a> 081529039723 <br>
-                                <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~fauzanadhin" target="_blank">@fauzanadhin</a> (LINE)
+                                <i class="ion-android-call"></i> <a href="http://wa.me/6285330096712" target="_blank" rel="noopener noreferrer">085330096712</a> <br>
+                                <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~4nggita01" target="_blank">@4nggita01</a> (LINE)
+                            </p>
+                        </h5>
+                        <h5 class="contact_person">
+                            Erla <br> 
+                            <p class="contact_person_numbers">
+                                <i class="ion-android-call"></i> <a href="http://wa.me/6287897362113" target="_blank" rel="noopener noreferrer">085330096712</a> <br>
+                                <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~erlaayuu" target="_blank">@4nggita01</a> (LINE)
                             </p>
                         </h5>
 
