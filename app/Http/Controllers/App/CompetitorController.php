@@ -80,7 +80,7 @@ class CompetitorController extends Controller
      */
     public function create()
     {
-        $competition = CompetitionCategory::isActive()->isIndividu()->get();
+        $competition = CompetitionCategory::isActive()->isIndividu()->orderBy('competition_type_id', 'asc')->get();
         // var_dump($competition);
         return view('app.competitor.create', compact('competition'));
     }

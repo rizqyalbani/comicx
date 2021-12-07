@@ -92,7 +92,7 @@
                 </style>
 
                 <div class="payment-box text-center">
-                    {{-- <img class="mb-2" src="{{$method->bank ? $method->bank->getImage() : '-'}}" alt="{{$method->bank ? $method->bank->name : '-'}}" width="100"> <br>
+                    <img class="mb-2" src="{{$method->bank ? $method->bank->getImage() : '-'}}" alt="{{$method->bank ? $method->bank->name : '-'}}" width="100"> <br>
                     {{$method->bank ? $method->bank->name : '-'}} (Kode : {{$method->bank ? $method->bank->kode : '-'}})
                     <h4 class="mt-1"><b>{{$method->ref_number}}</b></h4>
                     <p>a/n {{$method->ref_name}}</p>
@@ -100,8 +100,8 @@
                     <p>Jumlah Transfer
                     <h4>
                         Rp {{number_format($price + Auth::user()->id)}}
-                    </h4> --}}
-                    <img class="mb-2" src="{{asset('dokumen/competitor/bank/bca.png')}}" alt="Bank BCA" width="100"> <br>
+                    </h4>
+                    {{-- <img class="mb-2" src="{{asset('dokumen/competitor/bank/bca.png')}}" alt="Bank BCA" width="100"> <br>
                     Bank BCA (Kode : 014)
                     <h4 class="mt-1"><b>6110535005</b></h4>
                     <p>a/n Anggita Septi Fitria</p>
@@ -109,7 +109,7 @@
                     <p>Jumlah Transfer
                     <h4>
                         Rp {{number_format($price + Auth::user()->id)}}
-                    </h4>
+                    </h4> --}}
                      </p>
                      <a data-toggle="modal" data-target="#panduanModal" class="btn btn-primary" href="">Panduan Bayar</a>
                      <a href="" data-toggle="modal" data-target="#buktiModal" class="btn btn-success">Upload Bukti</a>
