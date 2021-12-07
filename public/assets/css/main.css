@@ -19,6 +19,8 @@
 	. Contact Section
 	.PROGRESSBAR
 	.SINGLE POST (COMMENTS SIDEBAR TAGS LIST)
+  .COMIC EDIT
+  
 	------------------------------------- */
 /*  ----------------------------------------------------
 1. GENERAL
@@ -3195,6 +3197,9 @@ textarea.form-control {
   color: black;
 }
 
+.event_word h5{
+  color: white !important;
+}
 
 .inner_cover .overlay_dark {
   position: absolute;
@@ -3220,3 +3225,6 @@ footer a.nav-link{
   padding: 15px 0;
   line-height: 1.3;
 }
+/*  ----------------------------------------------------
+12 Edit Comic
+-------------------------------------------------------- */

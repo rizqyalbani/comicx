@@ -29,74 +29,46 @@
     @yield('head')
 </head>
 <body>
-<!--<div class="loader">-->
-<!--    <div class="loader-outter"></div>-->
-<!--    <div class="loader-inner"></div>-->
-<!--</div>-->
-
-<!--header start here -->
-<header class="header navbar fixed-top navbar-expand-md">
-    <div class="container">
-        <a class="navbar-brand logo" href="/">
-            <img src="/assets/img/comic-x.png" alt="COMIC IX"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="lnr lnr-text-align-right"></span>
-        </button>
-        <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
-            <ul class=" nav navbar-nav menu">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Beranda</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('competitior.index')}}">Peserta</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('panduan.index')}}">Panduan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('qa.index')}}">Pertanyaan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="#kontak">Kontak</a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('maintenance')}}">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</header>
-<!--header end here-->
-
-@yield('content')
-
-<!--get tickets section -->
-<section class=" pt100 pb100" style="background-image: url({{asset('assets/img/bg/pattern.jpeg')}}); background-size: cover">
-    <div class="overlay_dark"></div>
-    <div class="container">
-        <div class="section_title mb30">
-            <h3 class="title color-light">
-                Tunggu Apa Lagi?
-            </h3>
-        </div>
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-9 text-md-left text-center color-light">
-                Daftarkan diri Anda segera, jadilah bagian dari kompetisi {{config('app.name')}} dan raih juaranya!
-            </div>
-            <div class="col-md-3 text-md-right text-center">
-            <a href="{{route('maintenance')}}" class="btn btn-primary btn-rounded mt30">Daftar Sekarang</a>
+    <!--header start here -->
+    <header class="header navbar fixed-top navbar-expand-md">
+        <div class="container">
+            <a class="navbar-brand logo" href="/">
+                <img src="/assets/img/comic-x.png" alt="COMIC IX"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#headernav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="lnr lnr-text-align-right"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-sm-row-reverse" id="headernav">
+                <ul class=" nav navbar-nav menu">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('competitior.index')}}">Peserta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('panduan.index')}}">Panduan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('qa.index')}}">Pertanyaan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#kontak">Kontak</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('maintenance')}}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
-<!--get tickets section end-->
-
-<!--footer start -->
+    </header>
+    <!--header end here-->
+    @yield('content')
+    <!--footer start -->
 <footer>
     <div class="container">
         <div class="row justify-content-center">
@@ -202,8 +174,8 @@
         <div class="row">
             <div class="col-md-12">
                 <p style="text-align: center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by IT Support {{config('app.name')}}
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by IT Support {{config('app.name')}}
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
             
         </div>

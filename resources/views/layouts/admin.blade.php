@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="ryanadhitama">
 
-  <title>@yield('title') - {{env("APP_NAME")}}</title>
+  <title>@yield('title') - {{config("app.name")}}</title>
   <link href="/assets/img/icon-matalogi.png" rel="icon">
 
   <!-- Custom fonts for this template-->

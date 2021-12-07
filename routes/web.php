@@ -19,6 +19,7 @@ Route::get('/tm', function(){
 });
 
 Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index']);
+Route::get('/maintenance', [App\Http\Controllers\HomeController::class, 'maintenance'])->name('maintenance');
 
 Route::get('/lomba/{slug}', [App\Http\Controllers\CompetitionTypeController::class, 'show'])->name('competition.detail');
 Route::get('/peserta', [App\Http\Controllers\CompetitorController::class, 'index'])->name('competitior.index');
@@ -66,6 +67,7 @@ Route::group(['middleware' => ['auth','activity']], function () {
     });
 
     Route::prefix('app')->name('app.')->namespace('App\Http\Controllers\App')->group(static function() {
+        Route::get('/maintenance', 'HomeController@maintenance')->name('maintenance');
         Route::post('/competitor/detail/{id}/update', 'CompetitorController@detailUpdate')->name('competitor.detail.update');
         Route::post('/competitor/create/team', 'CompetitorController@createTeamStore')->name('competitor.createTeam.store');
         Route::get('/competitor/create/team', 'CompetitorController@createTeam')->name('competitor.createTeam');

@@ -131,7 +131,7 @@
                             <b>Biaya Daftar</b>
                         </h5>
                         <p>
-                            Mulai dari Rp35.000,- per lomba 
+                            Mulai dari Rp25.000,- per lomba 
                         </p>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
                     COMIC adalah singkatan dari Competition of Islamic Creativity, merupakan ajang perlombaan yang diadakan oleh UKM MCOS STIKOM Bali untuk berkompetisi dalam berbagai bidang dalam Islam. COMIC diikuti oleh peserta dari berbagai jenjang seperti SD, SMP dan SMA atau Sederajat tingkat Nasional.
                 </p>
                 <p style="color: #fff">
-                    COMIC sudah diselenggarakan sebanyak 8 (delapan) kali, yang artinya pada tahun 2021 mendatang merupakan penyelenggaraan dari COMIC IX.
+                    COMIC sudah diselenggarakan sebanyak 9 (sembilan) kali, yang artinya pada tahun 2022 mendatang merupakan penyelenggaraan dari COMIC X.
                 </p>
             </div>
         </div>
@@ -187,7 +187,7 @@
     <div class="container">
         <div class="section_title mb50">
             <h3 class="title">
-               Jenis Lomba COMIC IX
+               Jenis Lomba COMIC X
             </h3>
             <a target="_blank" href="{{asset('dokumen/Booklet_COMIC_X.pdf')}}" class=" btn btn-primary btn-rounded">
                 Download Booklet Perlombaan
@@ -222,7 +222,7 @@
     <div class="container">
         <div class="section_title">
             <h3 class="title">
-                Syarat Pendaftaran COMIC IX
+                Syarat Pendaftaran COMIC X
             </h3>
         </div>
         <div class="row">
@@ -230,7 +230,7 @@
             <p>
               </p><ol style="color: white;font-weight: 500;">
                 <li>Beragama Islam</li>
-                <li>Tercatat sebagai Siswa/Siswi sampai tanggal 14 februari 2021</li>
+                <li>Tercatat sebagai Siswa/Siswi sampai tanggal 14 februari 2022</li>
                 <li>Mengunggah foto Peserta ukuran 3x4</li>
                 {{-- <li>Batas booking lomba 4 hari. Jika lewat dari batas, akan dihapus</li> --}}
                 {{-- <li>Peserta yang sakit saat perlombaan dianggap mengundurkan diri, kecuali sudah ijin 4 hari sebelum lomba &amp; digantikan dengan Peserta yang lain</li> --}}
@@ -245,7 +245,7 @@
                 <!--<a target="_blank" href="/dokumen/Surat_Pernyataan.pdf" class=" btn btn-primary btn-rounded mb-2">-->
                 <!--    Download Surat Pernyataan-->
                 <!--</a>-->
-                <a href="{{route('register')}}" class=" btn btn-primary btn-rounded">
+                <a href="{{route('maintenance')}}" class=" btn btn-primary btn-rounded">
                     Daftar Sekarang
                 </a>                
             <p></p>
@@ -275,7 +275,7 @@
                 <img src="{{asset('assets/img/pendaftaran-comic.svg')}}" class="m-auto" style="width: 100px; height: 100px"  alt="event">
                 <h5 class="mt-3" style="color: #fff">Pendaftaran Online</h5>
                 <span style="display: block">06 Desember 2021 - 06 Februari 2022</span>
-                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <img src="{{asset('assets/img/customIcon/arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">
@@ -283,15 +283,15 @@
                 <img src="{{asset('assets/img/tm-comic.svg')}}" class="m-auto" style="width: 90px; height: 90px" alt="event">
                 <h5 class="mt-3" style="color: #fff">Technical Meeting</h5>
                 <span style="display: block">Ahad, 13 Februari 2022</span>
-                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <img src="{{asset('assets/img/customIcon/arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">
             <div class="pt20 col-md-12 text-center">
                 <img src="{{asset('assets/img/upload-comic.svg')}}" style="width: 100px; height: 100px" class="m-auto" alt="event">
                 <h5 class="mt-3" style="color: #fff">Pengumpulan Karya</h5>
-                <span style="display: block">Kamis, 17 Februari 2022</span>
-                <img src="{{asset('assets/img/customIcon/Arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
+                <span style="display: block">Kamis, 17 Februari 2022 - Jumat, 18 Februari 2022</span>
+                <img src="{{asset('assets/img/customIcon/arrow-down.svg')}}" class="m-auto" style="width: 50px; height: 80px; position: relative" alt="Aroow down">
             </div>
         </div>
         <div class="row">

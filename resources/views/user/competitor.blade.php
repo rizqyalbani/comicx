@@ -86,7 +86,7 @@
                     <div class="col-md-12">
                         <br><br>
                         <div align="center">
-                            <a href="{{url('/register')}}" class="btn btn-primary btn-rounded">Daftar Sekarang</a>
+                            <a href="{{url('/maintenance')}}" class="btn btn-primary btn-rounded">Daftar Sekarang</a>
                         </div>
                     </div>
                 </div>

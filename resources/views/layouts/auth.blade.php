@@ -8,11 +8,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') - {{env('APP_NAME')}}</title>
+    <title>@yield('title') - {{config('app.name')}}</title>
     <link href="/assets/img/comic-x.png" rel="icon">
     <meta content="Competition of Islamic Creativity, merupakan ajang perlombaan yang diadakan oleh UKM MCOS STIKOM Bali" name="description">
     <meta property="og:description" content="Competition of Islamic Creativity, merupakan ajang perlombaan yang diadakan oleh UKM MCOS STIKOM Bali" >
-    <meta property="og:title" content="@yield('title') - {{env('APP_NAME')}}" />
+    <meta property="og:title" content="@yield('title') - {{config('app.name')}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{\URL::current()}}" />
 

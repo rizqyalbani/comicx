@@ -31,4 +31,9 @@ class HomeController extends Controller
 
         
     }
+
+    public function maintenance(){
+        $message = Message::isActive()->isForYou()->orderBy('id','desc')->get();
+        return view('maintenance', compact('message'));
+    }
 }

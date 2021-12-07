@@ -83,11 +83,11 @@
             <hr>
             @endif
 
-            <h5>Lihat lomba lainnya : </h5>
+            <h5 style="color: white;">Lihat lomba lainnya : </h5>
             <ul>
                 @foreach ($other as $item)
                 <li>
-                    <a href="{{route('competition.detail', $item->slug)}}">{{$item->name}}</a>
+                    <a style="color: white" href="{{route('competition.detail', $item->slug)}}">{{$item->name}}</a>
                 </li>
                 @endforeach
             </ul>
