@@ -48,7 +48,7 @@
             </div>
             <div >
                 <a href="{{route('register')}}" class="btn btn-primary btn-rounded">Daftar Perlombaan</a>
-                <a href="/dokumen/Booklet_COMIC_9.pdf" target="_blank" style="background :#54c0af; border-color: #54c0af;"  class="btn btn-primary btn-rounded">Download Booklet Perlombaan</a>
+                <a href="/dokumen/Booklet_COMIC_x.pdf" target="_blank" style="background :#54c0af; border-color: #54c0af;"  class="btn btn-primary btn-rounded">Download Booklet Perlombaan</a>
             </div>
 
             <br><br>
@@ -65,7 +65,7 @@
 
             @if($models->id == 3) 
             <hr>
-            <h5>Sisa Slot Lagu SMP</h5>
+            <h5 class="text-white">Sisa Slot Lagu SMP</h5>
             <ul>
                 @foreach ($data['smp'] as $item)
                 <li>{{$item->name}} | <u>Sisa Slot : {{3-$item->competitor_count("7")->count()}}</u> </li>
@@ -73,7 +73,7 @@
                 
             </ul>
             <hr>
-            <h5>Sisa Slot Lagu SMA</h5>
+            <h5 class="text-white">Sisa Slot Lagu SMA</h5>
             <ul>
                 @foreach ($data['smp'] as $item)
                 <li>{{$item->name}} | <u>Sisa Slot : {{3-$item->competitor_count("8")->count()}}</u> </li>
