@@ -92,10 +92,19 @@
                 </style>
 
                 <div class="payment-box text-center">
-                    <img class="mb-2" src="{{$method->bank ? $method->bank->getImage() : '-'}}" alt="{{$method->bank ? $method->bank->name : '-'}}" width="100"> <br>
+                    {{-- <img class="mb-2" src="{{$method->bank ? $method->bank->getImage() : '-'}}" alt="{{$method->bank ? $method->bank->name : '-'}}" width="100"> <br>
                     {{$method->bank ? $method->bank->name : '-'}} (Kode : {{$method->bank ? $method->bank->kode : '-'}})
                     <h4 class="mt-1"><b>{{$method->ref_number}}</b></h4>
                     <p>a/n {{$method->ref_name}}</p>
+                    <hr>
+                    <p>Jumlah Transfer
+                    <h4>
+                        Rp {{number_format($price + Auth::user()->id)}}
+                    </h4> --}}
+                    <img class="mb-2" src="{{asset('dokumen/competitor/bank/bca.png')}}" alt="Bank BCA" width="100"> <br>
+                    Bank BCA (Kode : 014)
+                    <h4 class="mt-1"><b>6110535005</b></h4>
+                    <p>a/n Anggita Septi Fitria</p>
                     <hr>
                     <p>Jumlah Transfer
                     <h4>
@@ -123,121 +132,121 @@
         
         <form action="{{route('app.payment.store')}}" method="POST" enctype="multipart/form-data" class="text-gray-800">
             <div class="modal-body"> 
-            <div class="form-group">
-                  @csrf
-                  <label for="">Bank pengirim</label>
-                  {{-- <input required type="text" name="bank" placeholder="contoh : Bank Mandiri" class="form-control"> --}}
+                <div class="form-group">
+                    @csrf
+                    <label for="">Bank pengirim</label>
+                    {{-- <input required type="text" name="bank" placeholder="contoh : Bank Mandiri" class="form-control"> --}}
 
-                  <select class="form-control select2 " name="bank" autocomplete="off" required style="width:100%;">
-                      <option value="Dana" >Dana</option>
-                    <option value="ANZ Panin Bank" >ANZ Panin Bank</option>
-                    <option value="Bank Agroniaga" >Bank Agroniaga</option>
-                    <option value="Bank Antar Daerah" >Bank Antar Daerah</option>
-                    <option value="Bank Artha Graha" >Bank Artha Graha</option>
-                    <option value="Bank Artos Indonesia" >Bank Artos Indonesia</option>
-                    <option value="Bank BKE" >Bank BKE</option>
-                    <option value="BANK BNI SYARIAH" >BANK BNI SYARIAH</option>
-                    <option value="Bank BTPN" >Bank BTPN</option>
-                    <option value="Bank Bukopin" >Bank Bukopin</option>
-                    <option value="Bank Bumi Arta" >Bank Bumi Arta</option>
-                    <option value="Bank Bumiputera Indonesia" >Bank Bumiputera Indonesia</option>
-                    <option value="Bank Capital" >Bank Capital</option>
-                    <option value="Bank Central Asia (BCA)"  selected >Bank Central Asia (BCA)</option>
-                    <option value="Bank Central Asia (BCA) Syariah" >Bank Central Asia (BCA) Syariah</option>
-                    <option value="Bank CIMB Niaga" >Bank CIMB Niaga</option>
-                    <option value="Bank Commonwealth" >Bank Commonwealth</option>
-                    <option value="Bank Danamon" >Bank Danamon</option>
-                    <option value="Bank DBS" >Bank DBS</option>
-                    <option value="Bank DKI" >Bank DKI</option>
-                    <option value="Bank Ekonomi Raharja" >Bank Ekonomi Raharja</option>
-                    <option value="Bank Eksekutif Internasional/BPR KS" >Bank Eksekutif Internasional/BPR KS</option>
-                    <option value="Bank Ganesha" >Bank Ganesha</option>
-                    <option value="Bank Hana" >Bank Hana</option>
-                    <option value="Bank INA Perdana" >Bank INA Perdana</option>
-                    <option value="Bank Index" >Bank Index</option>
-                    <option value="Bank Jabar Banten Syariah" >Bank Jabar Banten Syariah</option>
-                    <option value="Bank Jabar (BJB)" >Bank Jabar (BJB)</option>
-                    <option value="Bank Jasa Jakarta" >Bank Jasa Jakarta</option>
-                    <option value="Bank Kesawan" >Bank Kesawan</option>
-                    <option value="Bank Mandiri" >Bank Mandiri</option>
-                    <option value="Bank Mandiri Syariah" >Bank Mandiri Syariah</option>
-                    <option value="Bank Maspion" >Bank Maspion</option>
-                    <option value="Bank Mayapada Internasional" >Bank Mayapada Internasional</option>
-                    <option value="Bank Mayora" >Bank Mayora</option>
-                    <option value="Bank Mega" >Bank Mega</option>
-                    <option value="Bank Mega Syariah" >Bank Mega Syariah</option>
-                    <option value="Bank Mestika" >Bank Mestika</option>
-                    <option value="Bank Muamalat Indonesia" >Bank Muamalat Indonesia</option>
-                    <option value="Bank Mutiara" >Bank Mutiara</option>
-                    <option value="Bank Nagari" >Bank Nagari</option>
-                    <option value="Bank Nationalnobu" >Bank Nationalnobu</option>
-                    <option value="Bank Negara Indonesia (BNI)" >Bank Negara Indonesia (BNI)</option>
-                    <option value="Bank Nusantara Parahyangan" >Bank Nusantara Parahyangan</option>
-                    <option value="Bank OCBC NISP" >Bank OCBC NISP</option>
-                    <option value="Bank Of China" >Bank Of China</option>
-                    <option value="Bank Panin" >Bank Panin</option>
-                    <option value="Bank Permata" >Bank Permata</option>
-                    <option value="Bank Rakyat Indonesia (BRI)" >Bank Rakyat Indonesia (BRI)</option>
-                    <option value="Bank Royal" >Bank Royal</option>
-                    <option value="Bank Saudara" >Bank Saudara</option>
-                    <option value="Bank SBI Indonesia (IndoMonex)" >Bank SBI Indonesia (IndoMonex)</option>
-                    <option value="Bank Sinarmas" >Bank Sinarmas</option>
-                    <option value="Bank Swadesi" >Bank Swadesi</option>
-                    <option value="Bank Tabungan Negara (BTN)" >Bank Tabungan Negara (BTN)</option>
-                    <option value="Bank Victoria Internasional" >Bank Victoria Internasional</option>
-                    <option value="Bank Windu Kentjana Internasional" >Bank Windu Kentjana Internasional</option>
-                    <option value="BPD Aceh" >BPD Aceh</option>
-                    <option value="BPD Bali" >BPD Bali</option>
-                    <option value="BPD Bengkulu" >BPD Bengkulu</option>
-                    <option value="BPD DIY" >BPD DIY</option>
-                    <option value="BPD Jambi" >BPD Jambi</option>
-                    <option value="BPD Jateng" >BPD Jateng</option>
-                    <option value="BPD Jatim" >BPD Jatim</option>
-                    <option value="BPD Kalimantan Barat" >BPD Kalimantan Barat</option>
-                    <option value="BPD Kalimantan Selatan" >BPD Kalimantan Selatan</option>
-                    <option value="BPD Kalimantan Tengah" >BPD Kalimantan Tengah</option>
-                    <option value="BPD Kalimantan Timur" >BPD Kalimantan Timur</option>
-                    <option value="BPD Lampung" >BPD Lampung</option>
-                    <option value="BPD Maluku" >BPD Maluku</option>
-                    <option value="BPD NTB" >BPD NTB</option>
-                    <option value="BPD NTT" >BPD NTT</option>
-                    <option value="BPD Papua" >BPD Papua</option>
-                    <option value="BPD Riau" >BPD Riau</option>
-                    <option value="BPD Sulawesi Selatan" >BPD Sulawesi Selatan</option>
-                    <option value="BPD Sulawesi Tengah" >BPD Sulawesi Tengah</option>
-                    <option value="BPD Sulawesi Tenggara" >BPD Sulawesi Tenggara</option>
-                    <option value="BPD Sulawesi Utara" >BPD Sulawesi Utara</option>
-                    <option value="BPD Sumatera Utara" >BPD Sumatera Utara</option>
-                    <option value="BPD Sumsel dan Babel" >BPD Sumsel dan Babel</option>
-                    <option value="BRI Syariah" >BRI Syariah</option>
-                    <option value="Citibank" >Citibank</option>
-                    <option value="HSBC" >HSBC</option>
-                    <option value="Maybank" >Maybank</option>
-                    <option value="Rabobank" >Rabobank</option>
-                    <option value="Standard Chartered Bank" >Standard Chartered Bank</option>
-                    <option value="The Bank of Tokyo-Mitsubishi UFJ" >The Bank of Tokyo-Mitsubishi UFJ</option>
-                    <option value="UOB Indonesia" >UOB Indonesia</option>
-                </select>
+                    <select class="form-control select2 " name="bank" autocomplete="off" required style="width:100%;">
+                        <option value="Dana" >Dana</option>
+                        <option value="ANZ Panin Bank" >ANZ Panin Bank</option>
+                        <option value="Bank Agroniaga" >Bank Agroniaga</option>
+                        <option value="Bank Antar Daerah" >Bank Antar Daerah</option>
+                        <option value="Bank Artha Graha" >Bank Artha Graha</option>
+                        <option value="Bank Artos Indonesia" >Bank Artos Indonesia</option>
+                        <option value="Bank BKE" >Bank BKE</option>
+                        <option value="BANK BNI SYARIAH" >BANK BNI SYARIAH</option>
+                        <option value="Bank BTPN" >Bank BTPN</option>
+                        <option value="Bank Bukopin" >Bank Bukopin</option>
+                        <option value="Bank Bumi Arta" >Bank Bumi Arta</option>
+                        <option value="Bank Bumiputera Indonesia" >Bank Bumiputera Indonesia</option>
+                        <option value="Bank Capital" >Bank Capital</option>
+                        <option value="Bank Central Asia (BCA)"  selected >Bank Central Asia (BCA)</option>
+                        <option value="Bank Central Asia (BCA) Syariah" >Bank Central Asia (BCA) Syariah</option>
+                        <option value="Bank CIMB Niaga" >Bank CIMB Niaga</option>
+                        <option value="Bank Commonwealth" >Bank Commonwealth</option>
+                        <option value="Bank Danamon" >Bank Danamon</option>
+                        <option value="Bank DBS" >Bank DBS</option>
+                        <option value="Bank DKI" >Bank DKI</option>
+                        <option value="Bank Ekonomi Raharja" >Bank Ekonomi Raharja</option>
+                        <option value="Bank Eksekutif Internasional/BPR KS" >Bank Eksekutif Internasional/BPR KS</option>
+                        <option value="Bank Ganesha" >Bank Ganesha</option>
+                        <option value="Bank Hana" >Bank Hana</option>
+                        <option value="Bank INA Perdana" >Bank INA Perdana</option>
+                        <option value="Bank Index" >Bank Index</option>
+                        <option value="Bank Jabar Banten Syariah" >Bank Jabar Banten Syariah</option>
+                        <option value="Bank Jabar (BJB)" >Bank Jabar (BJB)</option>
+                        <option value="Bank Jasa Jakarta" >Bank Jasa Jakarta</option>
+                        <option value="Bank Kesawan" >Bank Kesawan</option>
+                        <option value="Bank Mandiri" >Bank Mandiri</option>
+                        <option value="Bank Mandiri Syariah" >Bank Mandiri Syariah</option>
+                        <option value="Bank Maspion" >Bank Maspion</option>
+                        <option value="Bank Mayapada Internasional" >Bank Mayapada Internasional</option>
+                        <option value="Bank Mayora" >Bank Mayora</option>
+                        <option value="Bank Mega" >Bank Mega</option>
+                        <option value="Bank Mega Syariah" >Bank Mega Syariah</option>
+                        <option value="Bank Mestika" >Bank Mestika</option>
+                        <option value="Bank Muamalat Indonesia" >Bank Muamalat Indonesia</option>
+                        <option value="Bank Mutiara" >Bank Mutiara</option>
+                        <option value="Bank Nagari" >Bank Nagari</option>
+                        <option value="Bank Nationalnobu" >Bank Nationalnobu</option>
+                        <option value="Bank Negara Indonesia (BNI)" >Bank Negara Indonesia (BNI)</option>
+                        <option value="Bank Nusantara Parahyangan" >Bank Nusantara Parahyangan</option>
+                        <option value="Bank OCBC NISP" >Bank OCBC NISP</option>
+                        <option value="Bank Of China" >Bank Of China</option>
+                        <option value="Bank Panin" >Bank Panin</option>
+                        <option value="Bank Permata" >Bank Permata</option>
+                        <option value="Bank Rakyat Indonesia (BRI)" >Bank Rakyat Indonesia (BRI)</option>
+                        <option value="Bank Royal" >Bank Royal</option>
+                        <option value="Bank Saudara" >Bank Saudara</option>
+                        <option value="Bank SBI Indonesia (IndoMonex)" >Bank SBI Indonesia (IndoMonex)</option>
+                        <option value="Bank Sinarmas" >Bank Sinarmas</option>
+                        <option value="Bank Swadesi" >Bank Swadesi</option>
+                        <option value="Bank Tabungan Negara (BTN)" >Bank Tabungan Negara (BTN)</option>
+                        <option value="Bank Victoria Internasional" >Bank Victoria Internasional</option>
+                        <option value="Bank Windu Kentjana Internasional" >Bank Windu Kentjana Internasional</option>
+                        <option value="BPD Aceh" >BPD Aceh</option>
+                        <option value="BPD Bali" >BPD Bali</option>
+                        <option value="BPD Bengkulu" >BPD Bengkulu</option>
+                        <option value="BPD DIY" >BPD DIY</option>
+                        <option value="BPD Jambi" >BPD Jambi</option>
+                        <option value="BPD Jateng" >BPD Jateng</option>
+                        <option value="BPD Jatim" >BPD Jatim</option>
+                        <option value="BPD Kalimantan Barat" >BPD Kalimantan Barat</option>
+                        <option value="BPD Kalimantan Selatan" >BPD Kalimantan Selatan</option>
+                        <option value="BPD Kalimantan Tengah" >BPD Kalimantan Tengah</option>
+                        <option value="BPD Kalimantan Timur" >BPD Kalimantan Timur</option>
+                        <option value="BPD Lampung" >BPD Lampung</option>
+                        <option value="BPD Maluku" >BPD Maluku</option>
+                        <option value="BPD NTB" >BPD NTB</option>
+                        <option value="BPD NTT" >BPD NTT</option>
+                        <option value="BPD Papua" >BPD Papua</option>
+                        <option value="BPD Riau" >BPD Riau</option>
+                        <option value="BPD Sulawesi Selatan" >BPD Sulawesi Selatan</option>
+                        <option value="BPD Sulawesi Tengah" >BPD Sulawesi Tengah</option>
+                        <option value="BPD Sulawesi Tenggara" >BPD Sulawesi Tenggara</option>
+                        <option value="BPD Sulawesi Utara" >BPD Sulawesi Utara</option>
+                        <option value="BPD Sumatera Utara" >BPD Sumatera Utara</option>
+                        <option value="BPD Sumsel dan Babel" >BPD Sumsel dan Babel</option>
+                        <option value="BRI Syariah" >BRI Syariah</option>
+                        <option value="Citibank" >Citibank</option>
+                        <option value="HSBC" >HSBC</option>
+                        <option value="Maybank" >Maybank</option>
+                        <option value="Rabobank" >Rabobank</option>
+                        <option value="Standard Chartered Bank" >Standard Chartered Bank</option>
+                        <option value="The Bank of Tokyo-Mitsubishi UFJ" >The Bank of Tokyo-Mitsubishi UFJ</option>
+                        <option value="UOB Indonesia" >UOB Indonesia</option>
+                    </select>
 
-              </div>
-              <div class="form-group">
-                <label for="">Nama pengirim di rekening bank</label>
-                <input required type="text" name="ref_name"  placeholder="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Nama pengirim di rekening bank</label>
+                    <input required type="text" name="ref_name"  placeholder="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Nomor rekening</label>
+                    <input required type="text" name="ref_number" placeholder="" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Foto bukti transfer</label>
+                    <input required type="file" name="proof_of_transfer" placeholder="" class="form-control">
+                </div>
             </div>
-            <div class="form-group">
-                <label for="">Nomor rekening</label>
-                <input required type="text" name="ref_number" placeholder="" class="form-control">
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+            <button type="submit" class="btn btn-success">Simpan</button>
             </div>
-            <div class="form-group">
-                <label for="">Foto bukti transfer</label>
-                <input required type="file" name="proof_of_transfer" placeholder="" class="form-control">
-            </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-          <button type="submit" class="btn btn-success">Simpan</button>
-        </div>
-          </form>
+        </form>
         
       </div>
     </div>

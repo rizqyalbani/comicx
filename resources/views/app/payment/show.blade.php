@@ -117,8 +117,9 @@
 
                 <small>
                     <br>
-                    <img class="mt-2" src="{{$models->payment ? $models->payment->bank ? $models->payment->bank->getImage() : '-' : '-'}}" alt="bank" width="100">
-                    <table style="width: 100%;" class="mt-2 mb-2">
+                    {{-- <img class="mt-2" src="{{$models->payment ? $models->payment->bank ? $models->payment->bank->getImage() : '-' : '-'}}" alt="bank" width="100"> --}}
+                    <img class="mt-2" src="{{asset('dokumen/competitor/bank/bca.png')}}" alt="bank" width="100">
+                    {{-- <table style="width: 100%;" class="mt-2 mb-2">
                         <tr>
                             <td>
                                 <b>Bank</b>
@@ -144,6 +145,37 @@
                             <td></td>
                             <td>
                                 : {{$models->payment ? $models->payment->ref_number : '-'}}
+                            </td>
+                        </tr>
+                        
+                        
+                    </table> --}}
+                    <table style="width: 100%;" class="mt-2 mb-2">
+                        <tr>
+                            <td>
+                                <b>Bank</b>
+                            </td>
+                            <td></td>
+                            <td>
+                                : Bank Central Asia
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Ref Name</b>
+                            </td>
+                            <td></td>
+                            <td>
+                                : Anggita Septi Fitria
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Ref Number</b>
+                            </td>
+                            <td></td>
+                            <td>
+                                : 6110535005
                             </td>
                         </tr>
                         
