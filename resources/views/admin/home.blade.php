@@ -17,7 +17,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['user']}}</div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-user fa-2x text-gray-300"></i>
+                <i class="fas fa-user fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
@@ -36,7 +36,7 @@
                 <small>Total : {{$data['competitor_total']}}</small>
               </div>
               <div class="col-auto">
-                <i class="fas fa-users fa-2x text-gray-300"></i>
+                <i class="fas fa-users fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
@@ -54,7 +54,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['category']}}</div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-table fa-2x text-gray-300"></i>
+                <i class="fas fa-table fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
@@ -72,7 +72,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['type']}}</div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-trophy fa-2x text-gray-300"></i>
+                <i class="fas fa-trophy fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
@@ -101,7 +101,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{$data['pending']}}</div>
               </div>
               <div class="col-auto">
-                <i class="fas fa-wallet fa-2x text-gray-300"></i>
+                <i class="fas fa-wallet fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
@@ -116,7 +116,7 @@
               <div class="h5 mb-0 font-weight-bold text-gray-800">{{number_format($data['dana'])}}</div>
               </div>
               <div class="col-auto">
-                <i class="fa fa-credit-card fa-2x text-gray-300"></i>
+                <i class="fa fa-credit-card fa-2x text-gray-800"></i>
               </div>
             </div>
           </a>
