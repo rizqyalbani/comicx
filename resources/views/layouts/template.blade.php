@@ -89,7 +89,7 @@
                 Daftarkan diri Anda segera, jadilah bagian dari kompetisi {{config('app.name')}} dan raih juaranya!
             </div>
             <div class="col-md-3 text-md-right text-center">
-            <a href="{{route('maintenance')}}" class="btn btn-primary btn-rounded mt30">Daftar Sekarang</a>
+            <a href="{{route('maintenance')}}" class="btn btn-secondary btn-rounded mt30">Daftar Sekarang</a>
             </div>
         </div>
     </div>

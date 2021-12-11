@@ -52,7 +52,7 @@
 
 
 <!--events section -->
-<section class="pt100 pb100">
+<section class="pt100 pb100 bg-black">
     <div class="container">
 
         <div class="row">

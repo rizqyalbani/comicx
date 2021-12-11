@@ -10,8 +10,8 @@ Lomba
 <a href="{{route('admin.index')}}" class="mb-2 d-block"><small><i class="fa fa-arrow-left"></i> Kembali</small></a>
 @endsection
 @section('content')
-<div class="card shadow mb-4">
 
+<div class="card shadow mb-4 mt-2">
     <!-- Card Body -->
    <div class="card-body ">
        <div class="table-responsive">
