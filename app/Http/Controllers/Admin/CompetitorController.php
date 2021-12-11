@@ -218,6 +218,7 @@ class CompetitorController extends Controller
                 $msg->name = 'Status Edit Data Peserta';
                 $msg->description = $m;
                 $msg->type_message = 6;
+                $msg->status=1;
                 $msg->target_id = $models->user_id;
                 $msg->user_id = Auth::user()->id;
                 $msg->save();
@@ -260,6 +261,7 @@ class CompetitorController extends Controller
                 $msg->name = 'Upload karya';
                 $msg->description = 'Karya '.$models->number().' ('.$name.') ditolak, silahkan upload ulang';
                 $msg->type_message = 3;
+                $msg->status=1;
                 $msg->target_id = $models->user_id;
                 $msg->user_id = Auth::user()->id;
                 $msg->save();
@@ -282,6 +284,7 @@ class CompetitorController extends Controller
                 $msg->name = 'Upload karya';
                 $msg->description = 'Karya '.$models->number().' ('.$name.') berhasil dikonfirmasi.';
                 $msg->type_message = 3;
+                $msg->status = 1;
                 $msg->target_id = $models->user_id;
                 $msg->user_id = Auth::user()->id;
                 $msg->save(); 

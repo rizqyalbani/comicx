@@ -41,7 +41,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  color: #18181c;
+  /* color: #18181c; */
   line-height: 1.3;
 }
 
@@ -458,7 +458,8 @@ img {
 }
 
 .bg-black {
-  background-color: #18181c !important;
+  color: #fff;
+  background-color: #191919 !important;
 }
 
 .bg-blue {
@@ -1930,6 +1931,11 @@ footer .newsletter_form .form-control {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
+.btn-secondary {
+  color: #fff;
+  background-color: #77d1c5;
+  border-color: #77d1c5;
+}
 .btn-primary:hover {
   background-color: #18181c;
   color: #ffffff;
@@ -2276,7 +2282,7 @@ Cover
   font-size: 12px;
   font-weight: 600;
   display: inline-block;
-  color: #18181c;
+  color: #fff;
 }
 .breadcrumbs ul li span {
   padding: 13px;

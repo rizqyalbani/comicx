@@ -29,7 +29,7 @@
 
 
 <!--events section -->
-<section class="pt100 pb100" style="background-color: #191919">
+<section class="pt100 pb100 bg-black">
     <div class="container">
 
         <div class="event_box">

@@ -86,8 +86,6 @@
                         <td colspan="7">Belum ada data. Segera lakukan pendaftaran dan pembayaran</td>
                     </tr>
                 @endforelse
-
-              
               
             </tbody>
         </table>

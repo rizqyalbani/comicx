@@ -444,7 +444,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Comic IX {{date('Y')}}</span>
+            <span>Copyright &copy; Comic X {{date('Y')}}</span>
           </div>
         </div>
       </footer>

@@ -146,6 +146,7 @@ class PaymentController extends Controller
         $msg->name = 'Pembayaran';
         $msg->description = 'Pembayaran '.$models->invoice().' diterima.';
         $msg->type_message = 2;
+        $msg->status = 1;
         $msg->target_id = $models->user_id;
         $msg->user_id = Auth::user()->id;
         $msg->status = 1;
