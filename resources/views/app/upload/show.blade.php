@@ -126,7 +126,12 @@
             </div>
             <div class="card-body">
                 @forelse ($models->submissionLog as $item)
+                    @if ($item->type == "danger")
+                        <span class="badge badge-{{$item->type}}">gagal</span> <br>
+                        
+                    @else
                     <span class="badge badge-{{$item->type}}">{{$item->type}}</span> <br>
+                    @endif
                     <small class="text-gray-800">
                         <b>{{$item->description}}</b> <br>
                         {{$item->date()}}
@@ -175,7 +180,7 @@
             'Success!',
             'Data Berhasil dikunci',
             'success'
-          
+          )
         } else {
           return false;
         }

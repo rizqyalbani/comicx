@@ -245,7 +245,7 @@
                 <!--<a target="_blank" href="/dokumen/Surat_Pernyataan.pdf" class=" btn btn-primary btn-rounded mb-2">-->
                 <!--    Download Surat Pernyataan-->
                 <!--</a>-->
-                <a href="{{route('maintenance')}}" class=" btn btn-primary btn-rounded">
+                <a href="{{route('register')}}" class=" btn btn-primary btn-rounded">
                     Daftar Sekarang
                 </a>                
             <p></p>
