@@ -50,9 +50,9 @@
             </div>
         </div>
 
-        <div class="breadcrumbs">
+        <div class="breadcrumbs" s>
             <ul>
-                <li><a href="/">Beranda</a>  |   </li>
+                <li><a tyle="color: #ffff !important" href="/">Beranda</a>  |   </li>
                 <li><span>Pertanyaan</span></li>
             </ul>
         </div>
@@ -62,7 +62,7 @@
 
 
 <!--events section -->
-<section class="pt100 pb100">
+<section class="pt100 pb100 bg-black">
     <div class="container">
 
         <div class="row">

@@ -61,7 +61,7 @@ Route::group(['middleware' => ['auth','activity']], function () {
         Route::resource('/payment', 'PaymentController', ['name'=>'payment']);
         Route::resource('/upload', 'UploadController', ['name'=>'upload']);
         Route::get('/competitor/upload/{id}', 'CompetitorController@competitorUpload')->name('competitor.upload');
-       
+        
         Route::resource('/competitor', 'CompetitorController', ['name'=>'competitor']);
         Route::resource('/panduan', 'PanduanController', ['name'=>'panduan']);
     });
@@ -72,10 +72,11 @@ Route::group(['middleware' => ['auth','activity']], function () {
         Route::post('/competitor/create/team', 'CompetitorController@createTeamStore')->name('competitor.createTeam.store');
         Route::get('/competitor/create/team', 'CompetitorController@createTeam')->name('competitor.createTeam');
         Route::post('/competitor/{id}/chooseSong', 'CompetitorController@chooseSong')->name('competitor.chooseSong');
-        Route::get('/competitor/{id}/chooseSurah', 'CompetitorController@chooseSurah')->name('competitor.chooseSurah');
+        Route::post('/competitor/{id}/chooseSurah', 'CompetitorController@chooseSurah')->name('competitor.chooseSurah');
         Route::resource('/competitor', 'CompetitorController', ['name'=>'competitor']);
         Route::resource('/upload', 'UploadController', ['name'=>'upload']);
         Route::resource('/payment', 'PaymentController', ['name'=>'payment']);
         Route::resource('/guide', 'GuideController', ['name'=>'guide']);
+        
     });
 });

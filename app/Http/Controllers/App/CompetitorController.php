@@ -72,7 +72,7 @@ class CompetitorController extends Controller
         $paymentChecker = PaymentChecker::showDataPayment();
         return view($this->view.'index', compact('models', 'paymentChecker'));
     }
-
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -254,7 +254,7 @@ class CompetitorController extends Controller
         $surah = Surah::where('competition_category_id', $models->competition_category_id)
                 ->doesnthave('competitor')
                 ->get();
-
+                
         if($request->access_edit == 'yes' && $request->detail != null) {
 
             $detail = CompetitorDetail::where('uuid',$request->detail)->where('competitor_id', $models->id)->first();
@@ -286,25 +286,22 @@ class CompetitorController extends Controller
     }
 
     public function chooseSurah(Request $request, $id){
-        $models = Competitor::where('uuid',$id)->where('user_id', Auth::user()->id)->first();
-        if(!$models) {
-            abort(404);
-        }
-
-        $surah = Surah::where('competition_category_id', $models->competition_category_id)
-                ->doesnthave('competitor')
-                ->inRandomOrder()
-                ->first();
-
-        if(!$surah) {
-            abort(404);
-        }
-
-        $models->surah_id = $surah->id;
-        $models->save();
-
-        return redirect()->back()->with('info', "Berhasil pilih maqro");
-
+        $surah = new Surah();
+                $models = Competitor::where('uuid',$id)->where('user_id', Auth::user()->id)->first();
+                $surah->surah = $request->surah;
+                $surah->ayat = $request->ayat;
+                $surah->halaman = $request->halaman;
+                $surah->competition_category_id = $models->competition_category_id;
+                $surah->id_competitor = $models->id;
+                $surah->save();
+                if($surah->id_competitor = $models->id){
+                    $models->surah_id = $surah->id;
+                    $models->save();
+                    return redirect()->back()->with('info', "Berhasil pilih maqro");
+                }else{
+                    return redirect()->back()->with('danger', "Gagal memilik maqro");
+        
+                }
     }
 
     /**

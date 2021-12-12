@@ -444,7 +444,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Comic IX {{date('Y')}}</span>
+            <span>Copyright &copy; Comic X {{date('Y')}}</span>
           </div>
         </div>
       </footer>
@@ -474,7 +474,7 @@
         <div class="modal-body">Pilih <b>keluar</b> di bawah ini jika Anda siap untuk mengakhiri sesi Anda saat ini.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-          <a class="dropdown-item" href="{{ route('logout') }}"
+          <a class="btn btn-primary w-100" href="{{ route('logout') }}"
                                            onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                                             Keluar

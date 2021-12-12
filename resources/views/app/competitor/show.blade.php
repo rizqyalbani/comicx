@@ -22,9 +22,7 @@
               </small> <br>
               <small>Catatan : </small> <br>
               {!!$models->statusPembayaran()!!} 
-                        {!!$models->statusKarya()!!}  
-       
-              
+                        {!!$models->statusKarya()!!} 
               
             </div>
           </div>
@@ -40,9 +38,35 @@
                 <b>Tilawah</b>
             </div>
             <div class="card-body text-gray-800">
+                @csrf
                 @if($models->surah_id == "")
-                    Anda belum memilih Maqro <br>
-                    <a onclick="set('{{route('app.competitor.chooseSurah', $models->uuid)}}')" href="javascript:void(0)" class="btn btn-success btn-sm">Pilih Maqro</a>
+                <b>Anda belum memilih Maqro</b> <br>
+                <form action="{{route('app.competitor.chooseSurah', $models->uuid)}}" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="" class="label">Surah</label>
+                                <input type="text" class="form-control" name="surah" id="">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="" class="label">Ayat</label>
+                                <input type="text" class="form-control" name="ayat" id="">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="" class="label">Halaman</label>
+                                <input type="number" class="form-control" name="halaman" id="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-sm">Simpan</button>
+                    </div>
+                </form>
                 @else
                     <b>{{$models->surah->surah}}</b> <br>
                     Ayat : {{$models->surah->ayat}} <br>
@@ -296,7 +320,7 @@
 
 @section('script')
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script>
+{{-- <script>
     function set(id) {
       Swal.fire({
         title: "Memilih Maqro?",
@@ -320,5 +344,5 @@
         }
       });
     }
-</script>
+</script> --}}
 @endsection

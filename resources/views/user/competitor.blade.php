@@ -47,7 +47,7 @@
 
 
 <!--events section -->
-<section class="pt100 pb100">
+<section class="pt100 pb100 bg-black">
     <div class="container">
         <div class="col-md-12">
         <label>
@@ -62,7 +62,7 @@
            <div class="event_box">
             <div class="event_word">
                 <div class="row justify-content-center">
-                    <div class="col-md-12 col-12" style="color: #222;">
+                    <div class="col-md-12 col-12" >
                         <div class="row">
                             <div class="col-md-12">
                                 <input type="text" onkeyup="filterTable(this)" onkeydown="filterTable(this)" class="form-control" placeholder="Cari Peserta">

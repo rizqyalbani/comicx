@@ -62,10 +62,10 @@
                 </li>
                 
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('maintenance')}}">Login</a>
+                    <a class="nav-link " href="{{route('login')}}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
+                    <a class="nav-link " href="{{route('register')}}">Daftar Sekarang</a>
                 </li>
             </ul>
         </div>
@@ -89,7 +89,7 @@
                 Daftarkan diri Anda segera, jadilah bagian dari kompetisi {{config('app.name')}} dan raih juaranya!
             </div>
             <div class="col-md-3 text-md-right text-center">
-            <a href="{{route('maintenance')}}" class="btn btn-primary btn-rounded mt30">Daftar Sekarang</a>
+            <a href="{{route('register')}}" class="btn btn-secondary btn-rounded mt30">Daftar Sekarang</a>
             </div>
         </div>
     </div>
@@ -147,10 +147,10 @@
                                 <a class="nav-link " href="{{route('qa.index')}}">Pertanyaan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{route('maintenance')}}">Login</a>
+                                <a class="nav-link " href="{{route('login')}}">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
+                                <a class="nav-link " href="{{route('register')}}">Daftar Sekarang</a>
                             </li>
                         
                         </ul>
