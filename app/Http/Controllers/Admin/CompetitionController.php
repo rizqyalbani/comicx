@@ -37,7 +37,11 @@ class CompetitionController extends Controller
      */
     public function create()
     {
-        //
+        $models = new CompetitionCategory();
+        $types = CompetitionType::isNotDeleted()->get();
+        $levels = CompetitionLevel::all();
+        $genders = CompetitionGender::all();
+        return view($this->view.'create', compact('models','types','levels','genders'));
     }
 
     /**
@@ -48,7 +52,30 @@ class CompetitionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new CompetitionCategory();
+            // validasi kelas a dan b
+            if ($request->class === "1,2,3") {
+                $model->code = "A";
+                // $model->save();
+            }
+            elseif ($request->class === "4,5,6") {
+                $model->code = "B";
+                // $model->save();
+
+            }
+            $model->competition_type_id = $request->name;
+            $model->competition_level_id = $request->level;
+            $model->competition_gender_id = $request->gender;
+            // $model->code = $request->code;
+            $model->class = $request->class;
+            $model->quota = $request->quota;
+            $model->isOnline = $request->online;
+            $model->min_member = $request->min_member;
+            $model->member = $request->member;
+            $model->price = $request->price;
+            $model->save();
+            return redirect()->back()->with('info', $this->SUCCESS_ADD);
+            
     }
 
     /**
@@ -100,8 +127,6 @@ class CompetitionController extends Controller
                 // $model->save();
 
             }
-
-
             $model->competition_type_id = $request->name;
             $model->competition_level_id = $request->level;
             $model->competition_gender_id = $request->gender;
