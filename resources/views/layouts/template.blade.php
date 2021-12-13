@@ -115,7 +115,7 @@
                         <ul class="footer_social">
                             
                             <li>
-                                <a href="http://instagram.com/comicstikombali" target="_blank"><i class="ion-social-instagram"></i></a>
+                                <a href="https://www.instagram.com/comicstikombali/" target="_blank"><i class="ion-social-instagram"></i></a>
                             </li>
                         </ul>
                     </div>
