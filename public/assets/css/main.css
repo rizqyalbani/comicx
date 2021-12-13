@@ -1882,12 +1882,10 @@ footer .newsletter_form .form-control {
   outline: 0 !important;
   border: none;
   cursor: pointer;
-  background-color: #18181c;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
 .btn:hover {
-  color: #18181c;
   background-color: #fff;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
@@ -1931,15 +1929,21 @@ footer .newsletter_form .form-control {
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
+.btn-primary:hover {
+  background-color: #77d1c5;
+  color: #ffffff;
+  border: solid 1px #77d1c5;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
 .btn-secondary {
   color: #fff;
   background-color: #77d1c5;
   border-color: #77d1c5;
 }
-.btn-primary:hover {
-  background-color: #18181c;
+.btn-secondary:hover {
+  background-color: #ff7c55;
   color: #ffffff;
-  border: solid 1px #18181c;
   -webkit-transition: all 300ms ease-in-out;
   transition: all 300ms ease-in-out;
 }
