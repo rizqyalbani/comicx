@@ -57,10 +57,10 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link " href="{{route('maintenance')}}">Login</a>
+                        <a class="nav-link " href="{{route('login')}}">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
+                        <a class="nav-link " href="{{route('register')}}">Daftar Sekarang</a>
                     </li>
                 </ul>
             </div>
@@ -119,10 +119,10 @@
                                 <a class="nav-link " href="{{route('qa.index')}}">Pertanyaan</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{route('maintenance')}}">Login</a>
+                                <a class="nav-link " href="{{route('login')}}">Login</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link " href="{{route('maintenance')}}">Daftar Sekarang</a>
+                                <a class="nav-link " href="{{route('register')}}">Daftar Sekarang</a>
                             </li>
                         
                         </ul>

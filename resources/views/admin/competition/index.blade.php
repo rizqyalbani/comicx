@@ -10,7 +10,12 @@ Lomba
 <a href="{{route('admin.index')}}" class="mb-2 d-block"><small><i class="fa fa-arrow-left"></i> Kembali</small></a>
 @endsection
 @section('content')
-
+<a href="{{route('admin.competition.create')}}" class="btn btn-primary btn-icon-split shadow">
+  <span class="icon text-white-50">
+    <i class="fas fa-plus"></i>
+  </span>
+  <span class="text">Tambah Data</span>
+</a>
 <div class="card shadow mb-4 mt-2">
     <!-- Card Body -->
    <div class="card-body ">
