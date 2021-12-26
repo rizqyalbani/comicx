@@ -40,7 +40,7 @@
                 @forelse ($models as $i => $item)
                 <tr>
                     <td>{{$i + 1}}</td>
-                    <td><small>{{$item->number()}}</small></td>
+                      <td><small>{{$item->number()}}</small></td>
                     <td>
                       <small>@if($item->competitor_status > 0)
                         {{$item->kwitansi()}}

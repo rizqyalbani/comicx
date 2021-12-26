@@ -48,7 +48,7 @@ class CompetitorController extends Controller
     
     public function index(Request $request)
     {
-        $models = Competitor::isNotDeleted()->where('id','!=',0);
+        $models = Competitor::isNotDeleted()->where('id','!=',0)->where('delete_status', '=', 0)->orWhereNull('delete_status');
         $com = CompetitionCategory::isActive()->get();
 
         if($request->type != null) {

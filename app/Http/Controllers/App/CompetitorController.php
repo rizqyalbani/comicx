@@ -66,7 +66,7 @@ class CompetitorController extends Controller
 
     public function index()
     {
-        $models = Competitor::isNotDeleted()->where('user_id', Auth::user()->id);
+        $models = Competitor::isNotDeleted()->where('user_id', Auth::user()->id)->orWhere('delete_status', '!=', 1)->orWhereNull('delete_status');
 
         $models = $models->get();
         $paymentChecker = PaymentChecker::showDataPayment();

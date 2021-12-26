@@ -75,6 +75,7 @@
                 <th>Telepon</th>
                 <th>Asal</th>
                 <th>Tanggal Daftar</th>
+                <th>Tanggal Deadline</th>
                 <th>Catatan</th>
                 <th>Kelengkapan Data (-)</th>
                 <th>Aksi</th>
@@ -107,6 +108,7 @@
             <td><small>{{$item->competitorDetail ? $item->competitorDetail->first()->from : '-'}}</small></td>
             <td><small>{{$item->date()}} <br>
             <b>Oleh</b> : {{$item->user->name}}</small></td>
+            <td><small>{{date('d-m-Y h:i:s', strtotime($item->pay_deadline))}}</small></td>
             <td>{!!$item->statusPembayaran()!!} 
                  {!!$item->statusKarya()!!}  
                 {{--{{$item->statusDokumen()}}  --}}
