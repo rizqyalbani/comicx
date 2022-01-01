@@ -72,7 +72,7 @@ class PaymentController extends Controller
                                         ->havingRaw('COUNT(*)< ?', [1]);
                             }); 
                         });
-        })->where('competitor_status', 0)->get();
+        })->where('competitor_status', 0)->where('delete_status', '!=', 1)->get();
         // return $competitor;
         $method = PaymentMethod::first();
         

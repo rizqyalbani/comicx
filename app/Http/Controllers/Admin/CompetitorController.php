@@ -50,7 +50,7 @@ class CompetitorController extends Controller
     {
         $models = Competitor::isNotDeleted()->where('id','!=',0)->where('delete_status', '=', 0)->orWhereNull('delete_status');
         $com = CompetitionCategory::isActive()->get();
-
+    
         if($request->type != null) {
             $models = $models->where('competition_category_id', $request->type);
             $models = $models->where('competition_number', '!=', NULL);
@@ -148,7 +148,17 @@ class CompetitorController extends Controller
     
             return response()->stream($callback, 200, $headers);
         }
-
+        foreach ($models as $model ) {
+            if ($model->pay_deadline == null && ($model->competitor_status == 0 || $model->competitor_status == -1)) {
+                $competitor = new Competitor();
+                $updateDeadline = date( "Y-m-d H:i:s", strtotime($model->date()."+4 days", time() ));
+                $update = $competitor->findOrFail($model->id);
+                $update->pay_deadline = $updateDeadline;
+                $update->save();
+            }
+        // dump($model);
+        }
+        // die;
         return view($this->view.'index', compact('models','com'));
     }
 
