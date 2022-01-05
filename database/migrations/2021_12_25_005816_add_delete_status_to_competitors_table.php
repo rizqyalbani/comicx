@@ -14,7 +14,7 @@ class AddDeleteStatusToCompetitorsTable extends Migration
     public function up()
     {
         Schema::table('competitors', function (Blueprint $table) {
-            $table->integer('delete_status')->nullable();
+            $table->integer('delete_status');
         });
     }
 

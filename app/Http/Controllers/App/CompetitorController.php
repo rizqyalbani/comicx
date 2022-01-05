@@ -66,9 +66,9 @@ class CompetitorController extends Controller
 
     public function index()
     {
-        $models = Competitor::isNotDeleted()->where('user_id', Auth::user()->id)->orWhere('delete_status', '!=', 1)->orWhereNull('delete_status');
-
+        $models = Competitor::isNotDeleted()->where('user_id', Auth::user()->id)->where('delete_status', '!=', 1);
         $models = $models->get();
+        // dd($models);
         $paymentChecker = PaymentChecker::showDataPayment();
         return view($this->view.'index', compact('models', 'paymentChecker'));
     }
@@ -250,7 +250,6 @@ class CompetitorController extends Controller
     {
         $models = Competitor::where('uuid',$id)->where('user_id', Auth::user()->id)->first();
         $song = Songs::all();
-        // return $models->competition_category_id;
         $surah = Surah::where('competition_category_id', $models->competition_category_id)
                 ->doesnthave('competitor')
                 ->get();

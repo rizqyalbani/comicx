@@ -27,10 +27,12 @@ class HomeController extends Controller
     {   
         // dd(Auth::user()->id);
         $message = Message::isActive()->isForYou()->orderBy('id','desc')->get();
-        $paymentChecker = PaymentChecker::showDataPayment();
         // die;
         if (Auth::user()->isAdmin == 1) {
-            $all = PaymentChecker::showDataPaymentAll();
+            $paymentChecker = PaymentChecker::showDataPaymentAll();
+        }
+        else{
+            $paymentChecker = PaymentChecker::showDataPayment();
         }
         // dd($all);
         // dump($all['dataDetail']);

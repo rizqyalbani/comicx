@@ -48,7 +48,7 @@ class CompetitorController extends Controller
     
     public function index(Request $request)
     {
-        $models = Competitor::isNotDeleted()->where('id','!=',0)->where('delete_status', '=', 0)->orWhereNull('delete_status');
+        $models = Competitor::where('id','!=',0)->where('delete_status', '=', 0)->orWhereNull('delete_status');
         $com = CompetitionCategory::isActive()->get();
     
         if($request->type != null) {
@@ -148,6 +148,7 @@ class CompetitorController extends Controller
     
             return response()->stream($callback, 200, $headers);
         }
+        // dd($models);
         foreach ($models as $model ) {
             if ($model->pay_deadline == null && ($model->competitor_status == 0 || $model->competitor_status == -1)) {
                 $competitor = new Competitor();

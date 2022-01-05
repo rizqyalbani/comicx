@@ -25,7 +25,6 @@ class PaymentChecker extends Controller
 
         if (isset($data->pay_deadline)) {
             if ($now > $data->pay_deadline) {
-
                 $nameCrawl = $data->competitorDetail->first();
                 $dataName = $nameCrawl->name;
                 $dataDetail = DB::table('competitors AS a')
@@ -66,15 +65,29 @@ class PaymentChecker extends Controller
         })->where('a.pay_deadline', '<', $now)->get()->all();
         $decodeDataDetail = $dataDetail;
         $fullGender = "";
+
+        // update column dan hasil query jika ada yang null;
         foreach ($decodeDataDetail as $dd) {
+            // dump($dd->team_name);
+            if ($dd->pay_deadline == null && ($dd->competitor_status == 0 || $dd->competitor_status == -1) ) {
+                $competitor = new Competitor();
+                $updateDeadline = date( "Y-m-d H:i:s", strtotime($dd->date()."+4 days", time() ));
+                $update = $competitor->findOrFail($dd->id);
+                $update->pay_deadline = $updateDeadline;
+                $update->save();
+            }
+
             $deleteColumn = DB::table('competitors')->where('id', $dd->competitor_id)->where(function($query){
-                $query->where('competitor_status', 0)->orWhere('competitor_status', -1);
-            })->where(function($query){
-                $query->where('delete_status', 0)->orWhereNull('delete_status');
+                $query->orWhere('competitor_status', 0)->orWhere('competitor_status', -1)->orWhere('competitor_status', "!=", 1);
+                })->where(function($query){
+                    $query->where('delete_status', 0)->orWhereNull('delete_status');
             })->update(['delete_status' => 1]);
 
             $compeType = CompetitionType::where('id', $dd->competition_type_id)->first();
             $compeLevel = CompetitionLevel::where('id', $dd->competition_level_id)->first();
+
+
+            // message
             if ($deleteColumn) {
                 $models = User::where('isAdmin', 1)->where('id', Auth::user()->id)->first();
                 $msg = new \App\Models\Message;
@@ -103,7 +116,7 @@ class PaymentChecker extends Controller
     static public function deleteAutoLatePayment(){
         $id_user = Auth::user()->id;
         $data = Competitor::where('user_id', $id_user)->where('competitor_status', 0)->orWhere('delete_status', 1)->first();
-        // dd($data);
+        // dump($data->competitorAuth)->first();
         $dataAuth = $data->competitorAuth->first();
         $dataDetail = $data->competitorDetail->first();
         if ($data) {

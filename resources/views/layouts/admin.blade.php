@@ -504,16 +504,18 @@
 
 <script>
 
-  @if (isset($paymentChecker))
+  @if (Auth::user()->isAdmin == 0)
+    @if (isset($paymentChecker))
 
-      Swal.fire({
-      title: 'Batas Waktu Pembayaran Berakhir',
-      html: "Pembayaran atas Nama <br> <strong>{{$paymentChecker['dataName']}}</strong> - <strong>{{$paymentChecker['dataDetail']->name . ' ' . $paymentChecker['level'] . $paymentChecker['fullGender'] }}</strong> dibatalkan karena batas waktu pembayaran telah berakhir. Silahkan melakukan pendaftaran ulang",
-      icon: 'error',
-      confirmButtonText: '<a class="text-white text-decoration-none" href="{{url('app/competitor')}}">Lanjutkan</a>'
-    })
-    {{App\Http\Controllers\PaymentChecker::deleteAutoLatePayment()}};
+        Swal.fire({
+        title: 'Batas Waktu Pembayaran Berakhir',
+        html: "Pembayaran atas Nama <br> <strong>{{$paymentChecker['dataName']}}</strong> - <strong>{{$paymentChecker['dataDetail']->name . ' ' . $paymentChecker['level'] . $paymentChecker['fullGender'] }}</strong> dibatalkan karena batas waktu pembayaran telah berakhir. Silahkan melakukan pendaftaran ulang",
+        icon: 'error',
+        confirmButtonText: '<a class="text-white text-decoration-none" href="{{url('app/competitor')}}">Lanjutkan</a>'
+      })
+      {{App\Http\Controllers\PaymentChecker::deleteAutoLatePayment()}};
 
+    @endif
   @endif
 
 </script>
