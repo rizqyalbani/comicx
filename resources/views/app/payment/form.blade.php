@@ -94,7 +94,8 @@
                 <div class="payment-box text-center">
                     <img class="mb-2" src="{{$method->bank ? $method->bank->getImage() : '-'}}" alt="{{$method->bank ? $method->bank->name : '-'}}" width="100"> <br>
                     {{$method->bank ? $method->bank->name : '-'}} (Kode : {{$method->bank ? $method->bank->kode : '-'}})
-                    <h4 class="mt-1"><b>{{$method->ref_number}}</b></h4>
+                    {{-- <h4 class="mt-1"><b>{{$method->ref_number}}</b></h4> --}}
+                    <h4 class="mt-1"><b>6110535005</b></h4>
                     <p>a/n {{$method->ref_name}}</p>
                     <hr>
                     <p>Jumlah Transfer
