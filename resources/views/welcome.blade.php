@@ -367,16 +367,24 @@
         </div>
         <div class="text-center">
             @if ($sponsor_utama->count() > 0)
-            @foreach ($sponsor_utama as $item)
-                <img class="sponsorship" data-toggle="tooltip" data-placement="bottom" src="{{$item->getImage()}}" alt="{{$item->name}}">
-            @endforeach
-            
+            <div class="row justify-content-center ">
+                @foreach ($sponsor_utama as $item)
+                    <div class="col-lg-6">
+                        <img class="sponsorship w-100" data-toggle="tooltip" data-placement="bottom" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    </div>
+                @endforeach
+            </div>
+
             <br> <br>
             @endif
             
-            @forelse ($sponsor as $item)
-                <img class="media-partner" src="{{$item->getImage()}}" alt="{{$item->name}}">
-            @empty
+            <div class="row justify-content-center align-items-center ">
+                @forelse ($sponsor as $item)
+                    <div class="col-lg-4">
+                        <img class="media-partner w-75" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    </div>
+                @empty
+            </div>
                 <p style="text-align:left;">Slot tersedia</p>
             @endforelse
         
@@ -390,10 +398,14 @@
             </h3>
         </div>
         <div class="text-center">
-            
-            @forelse ($media as $item)
-                <img class="media-partner" src="{{$item->getImage()}}" alt="{{$item->name}}">
-            @empty
+            <div class="row justify-content-center align-items-center">
+                @forelse ($media as $item)
+                    <div class="col-lg-4">
+                        <img class="media-partner w-75" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    </div>
+                @empty
+            </div>
+
                 <p style="text-align:left;">Slot tersedia</p>
             @endforelse
             
