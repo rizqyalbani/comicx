@@ -36,8 +36,10 @@ Route::prefix('api')->name('api.')->namespace('App\Http\Controllers\Api')->group
 
 Auth::routes();
 
+
 Route::group(['middleware' => ['activity']], function () {   
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'maintenance'])->name('home');
 });
 
 Route::group(['middleware' => ['auth','activity']], function () {    
