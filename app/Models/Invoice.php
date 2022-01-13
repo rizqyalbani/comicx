@@ -21,10 +21,12 @@ class Invoice extends Model
     public function getStatus()
     {
         $msg = "<span class='badge badge-info'>Pending</span>";
-        if($this->status == 1) {
+        if($this->status == 1 && $this->off_status == 0) {
             $msg = "<span class='badge badge-success'>Lunas</span>";
-        } else if($this->status == -1){
+        } else if($this->status == -1 && $this->off_status == 0){
             $msg = "<span class='badge badge-danger'>Ditolak</span>";
+        } else if($this->status == 1 && $this->off_status == 1){
+            $msg = "<span class='badge badge-danger'>Lunas & Hidden</span>";
         }
 
         return $msg;

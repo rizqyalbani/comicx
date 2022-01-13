@@ -53,7 +53,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="" class="label">Ayat</label>
-                                <input type="text" class="form-control" name="ayat" id="">
+                                <input type="number" max='7' min='4' class="form-control" name="ayat" id="">
                             </div>
                         </div>
                         <div class="col-md-4">

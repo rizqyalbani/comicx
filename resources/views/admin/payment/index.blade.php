@@ -56,6 +56,9 @@
                 <a href="{{route('admin.payment.edit',$item->uuid)}}" class="btn btn-warning btn-circle btn-sm">
                     <i class="fas fa-pen"></i>
                 </a>
+                <a href="{{route('admin.change_off',$item->uuid)}}" class="btn btn-info btn-circle btn-sm">
+                  <i class="fas fa-sync"></i>
+                </a>
             </td>
           </tr>
             @empty
@@ -78,6 +81,8 @@
 <script src="/admin/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="/admin/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
     function openModalOnHash() {
         if(window.location.hash) {
@@ -97,6 +102,16 @@
     $('#status_bayar').change(function(){
         window.location = $(this).find('option:selected').val();
       });
+    @if(\Session::has('alert-success'))
+      // {{'halo'}};
+      Swal.fire({
+          title: "Selamat!",
+          text: "Berhasil Mengatur Status Tampil",
+          icon: "success",
+          button: "Okay",
+      });
+    @endif
+    
 
     function deleteData(id) {
       Swal.fire({

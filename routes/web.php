@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\PaymentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 /*
@@ -39,7 +40,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['activity']], function () {   
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'maintenance'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
 
 Route::group(['middleware' => ['auth','activity']], function () {    
@@ -60,6 +61,7 @@ Route::group(['middleware' => ['auth','activity']], function () {
         Route::get('/imgDelete/{id}', 'SponsorController@imgDelete')->name('sponsor.imgDelete');
         Route::get('payment/{id}/decline', 'PaymentController@decline')->name('payment.decline');
         Route::get('payment/{id}/receive', 'PaymentController@receive')->name('payment.receive');
+        Route::get('payment/{id}/change_off', [PaymentController::class, 'change_off'])->name('change_off');
         Route::resource('/payment', 'PaymentController', ['name'=>'payment']);
         Route::resource('/upload', 'UploadController', ['name'=>'upload']);
         Route::get('/competitor/upload/{id}', 'CompetitorController@competitorUpload')->name('competitor.upload');

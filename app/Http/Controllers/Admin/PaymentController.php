@@ -75,6 +75,22 @@ class PaymentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function change_off($id)
+    {
+        $models = Invoice::where('uuid',$id)->first();
+        
+        if ($models->off_status == 1) {
+            $models->off_status = 0;
+        }
+        else{
+            $models->off_status = 1;
+        }
+        $models->save();
+
+        // return view($this->view.'form', compact('models'));
+        return redirect(url('admin/payment'))->with('alert-success', 'Berhasil mengganti data');;
+    }
+    
     public function edit($id)
     {
         $models = Invoice::where('uuid',$id)->first();
