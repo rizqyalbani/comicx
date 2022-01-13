@@ -40,7 +40,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['activity']], function () {   
     // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'maintenance'])->name('home');
 });
 
 Route::group(['middleware' => ['auth','activity']], function () {    
