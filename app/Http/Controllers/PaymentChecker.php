@@ -115,8 +115,10 @@ class PaymentChecker extends Controller
     
     static public function deleteAutoLatePayment(){
         $id_user = Auth::user()->id;
-        $data = Competitor::where('user_id', $id_user)->where('competitor_status', 0)->orWhere('delete_status', 1)->first();
-        // dump($data->competitorAuth)->first();
+        // dd($id_user);
+        $data = Competitor::where('user_id', $id_user)->where('competitor_status', 0)->Where('delete_status', 1)->first();
+        // dd($data->user_id);
+        $data->competitorAuth->first();
         $dataAuth = $data->competitorAuth->first();
         $dataDetail = $data->competitorDetail->first();
         if ($data) {
