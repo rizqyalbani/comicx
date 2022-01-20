@@ -53,7 +53,7 @@
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="" class="label">Ayat</label>
-                                <input type="text" class="form-control" name="ayat" id="">
+                                <input type="text" max='7' min='4' class="form-control" name="ayat" id="">
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -71,6 +71,12 @@
                     <b>{{$models->surah->surah}}</b> <br>
                     Ayat : {{$models->surah->ayat}} <br>
                     Halaman : {{$models->surah->halaman}}
+                    @if ($models->competitorDetail->first()->identity_lock !== 1)
+                        <div class="d-block" >
+                            <a class="btn btn-info d-inline-block mt-2" href="{{url('app/competitor/'.$models->uuid.'/updateSurah')}}">Edit</a>
+                        </div>
+                    @endif
+
                 @endif
             </div>
         </div>

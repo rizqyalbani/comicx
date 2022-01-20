@@ -366,25 +366,29 @@
             </h3>
         </div>
         <div class="text-center">
-            <div class="row">
-                @if ($sponsor_utama->count() > 0)
+
+            @if ($sponsor_utama->count() > 0)
+            <div class="row justify-content-center ">
                 @foreach ($sponsor_utama as $item)
-                <div class="col-md-12">
-                    <img class="sponsorship" data-toggle="tooltip" data-placement="bottom" src="{{$item->getImage()}}" alt="{{$item->name}}">
-                </div>
+                    <div class="col-lg-6">
+                        <img class="sponsorship w-100" data-toggle="tooltip" data-placement="bottom" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    </div>
                 @endforeach
-                
-                <br> <br>
-                @endif
-                
+            </div>
+
+            <br> <br>
+            @endif
+            
+            <div class="row justify-content-center align-items-center ">
                 @forelse ($sponsor as $item)
-                    <div class="col-md-4">
-                        <img class="media-partner" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    <div class="col-lg-4">
+                        <img class="media-partner w-75" src="{{$item->getImage()}}" alt="{{$item->name}}">
                     </div>
                 @empty
-                    <p style="text-align:left;">Slot tersedia</p>
-                @endforelse
             </div>
+                <p style="text-align:left;">Slot tersedia</p>
+            @endforelse
+
         </div>
     </div>
     <br>
@@ -395,15 +399,17 @@
             </h3>
         </div>
         <div class="text-center">
-            <div class="row">
+            <div class="row justify-content-center align-items-center">
                 @forelse ($media as $item)
-                <div class="col-md-4">
-                    <img class="media-partner" src="{{$item->getImage()}}" alt="{{$item->name}}">
-                </div>
+                    <div class="col-lg-4">
+                        <img class="media-partner w-75" src="{{$item->getImage()}}" alt="{{$item->name}}">
+                    </div>
                 @empty
-                    <p style="text-align:left;">Slot tersedia</p>
-                @endforelse
             </div>
+
+                <p style="text-align:left;">Slot tersedia</p>
+            @endforelse
+       
         </div>
     </div>
 </section>

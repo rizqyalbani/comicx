@@ -299,8 +299,20 @@ class CompetitorController extends Controller
                     return redirect()->back()->with('info', "Berhasil pilih maqro");
                 }else{
                     return redirect()->back()->with('danger', "Gagal memilik maqro");
-        
                 }
+    }
+
+    public function updateSurah(Request $request){
+        $surah = Competitor::where('uuid', $request->id)->first();
+
+        $surahHapus = Surah::where('id', $surah->surah_id);
+        $surahHapus->delete();
+
+        $surah->surah_id = null;
+        $surah->save();
+
+        return redirect()->back()->with('info', 'Silahkan isi kembali maqro');
+
     }
 
     /**

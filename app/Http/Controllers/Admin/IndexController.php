@@ -22,7 +22,7 @@ class IndexController extends Controller
         $data['category']   = CompetitionCategory::isNotDeleted()->count();
         $data['type']       = CompetitionType::isNotDeleted()->count();
         $data['pending']       = Invoice::where('status',0)->count();
-        $data['dana']       = Invoice::where('status',1)->get()->sum('total');
+        $data['dana']       = Invoice::where('status',1)->where('off_status', '!=', 1)->get()->sum('total');
         // $data['competitor'] = CompetitorDetail::whereHas('competitor', function (Builder $query){
         //     // $query->where('competitor_status', '>', 0);
         // })->count();

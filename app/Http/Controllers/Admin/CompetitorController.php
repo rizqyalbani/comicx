@@ -48,15 +48,18 @@ class CompetitorController extends Controller
     
     public function index(Request $request)
     {
-        $models = Competitor::where('id','!=',0)->where('delete_status', '=', 0)->orWhereNull('delete_status');
+        $models = Competitor::where('id','!=',0)->where('delete_status', '=', 0);
         $com = CompetitionCategory::isActive()->get();
-    
+        // dd($request->type);
         if($request->type != null) {
             $models = $models->where('competition_category_id', $request->type);
             $models = $models->where('competition_number', '!=', NULL);
             $models = $models->orderBy('competition_number');
-
+            
+            // $models = $models->where('competition_category_id', $request->type);
+            // dd($models->get());
         }
+
 
         if($request->status != null) {
 
@@ -67,6 +70,7 @@ class CompetitorController extends Controller
             }
 
         }
+
 
         if($request->karya != null) {
 
@@ -88,7 +92,6 @@ class CompetitorController extends Controller
             }
 
         }
-
         $models = $models->get();
 
         if($request->download != null) {
