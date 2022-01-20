@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CompetitorController;
 use App\Http\Controllers\Admin\PaymentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -77,6 +78,7 @@ Route::group(['middleware' => ['auth','activity']], function () {
         Route::get('/competitor/create/team', 'CompetitorController@createTeam')->name('competitor.createTeam');
         Route::post('/competitor/{id}/chooseSong', 'CompetitorController@chooseSong')->name('competitor.chooseSong');
         Route::post('/competitor/{id}/chooseSurah', 'CompetitorController@chooseSurah')->name('competitor.chooseSurah');
+        Route::get('/competitor/{id}/updateSurah', [App\Http\Controllers\App\CompetitorController::class, 'updateSurah'])->name('competitor.updateSurah');
         Route::resource('/competitor', 'CompetitorController', ['name'=>'competitor']);
         Route::resource('/upload', 'UploadController', ['name'=>'upload']);
         Route::resource('/payment', 'PaymentController', ['name'=>'payment']);
