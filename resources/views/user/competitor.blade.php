@@ -1,5 +1,5 @@
 @extends('layouts.template')
-@section('title')Peserta COMIC IX
+@section('title')Peserta COMIC X
 @endsection
 @section('head')
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
             <div class="col-12">
                 <div class="inner_cover_content">
                     <h3>
-                        Peserta COMIC IX
+                        Peserta COMIC X
                     </h3>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li><a href="/">Beranda</a>  |   </li>
-                <li><span>Peserta COMIC IX</span></li>
+                <li><span>Peserta COMIC X</span></li>
             </ul>
         </div>
     </div>

@@ -11,6 +11,7 @@ use App\Models\CompetitorDetail;
 use App\Models\Competitor;
 use App\Models\Invoice;
 use App\Models\InvoiceDetail;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -32,6 +33,10 @@ class IndexController extends Controller
         // })->count();
 
         $models = CompetitionCategory::isActive()->get();
+        $jumlah_peserta = DB::table('competitors')
+        ->join('invoices', 'competitors.invoice_id', '=', 'invoices.id')
+        ->where('invoices.off_status', 0)->get();
+        // dd($jumlah_peserta);
 
         $data['competitor'] = Competitor::where('competitor_status', '>', 0)->count();
         $data['competitor_total'] = CompetitorDetail::whereHas('competitor', function($query){
@@ -50,7 +55,16 @@ class IndexController extends Controller
 
         $invoice_graph = json_encode($invoice_graph);
         $date_graph = json_encode($date_graph);
-        
+        $mcheck = new CompetitionCategory();
+        // $jumlah_peserta = DB::table('competition_categories', 'a')
+        // ->join('competitors AS b', 'a.id', '=', 'b.competition_category_id')
+        // ->join('invoices AS c', 'b.invoice_id', '=', 'c.id')
+        // ->selectRaw('a.*, a.competition_type_id AS nama_lomba, b.*')->groupBy('b.competition_category_id')
+        // ->where('off_status', '!=', 1)->get()->count();
+
+        // dd($jumlah_peserta);
+
+        $gerak = 0;
         return view($this->view.'home', compact('data','models','date_graph','invoice_graph'));
     }
 

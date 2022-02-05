@@ -32,7 +32,9 @@
                         
                 </div>
                 
-                {!! NoCaptcha::display() !!}
+                <div class="form-group">
+                    {!! NoCaptcha::display() !!}
+                </div>
                 @if ($errors->has('g-recaptcha-response'))
                 <br>
                     <div class="form-group text-left">

@@ -37,6 +37,13 @@ class CompetitionCategory extends Model
 
     }
 
+    public function getNumber(){
+        foreach ($this->competitor()->get()->all() as $item) {
+            dump($item->invoices());
+        }
+        // return $this->invoices()->where('off_status', 0)->get()->count();
+    }
+
     public function code()
     {
         $name = $this->competitionType->code;
@@ -91,6 +98,11 @@ class CompetitionCategory extends Model
     public function competitor()
     {
         return $this->hasMany('App\Models\Competitor')->where('competitor_status','>',0);
+    }
+
+    public function invoices()
+    {
+        return $this->belongsToMany(InvoiceDetail::class, 'Competitors', 'competition_category_id', 'invoice_id');
     }
 
     public function scopeIsIndividu($query)

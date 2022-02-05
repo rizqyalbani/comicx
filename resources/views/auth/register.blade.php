@@ -8,8 +8,6 @@
         <div class="col-md-12">
             <form id="form-register" method="POST" action="{{ route('register') }}">
                 @csrf
-                
-            
                 <div class="form-group text-left">
                     <label for="name" class="text-white">Nama</label>
                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus id="name">
@@ -52,7 +50,9 @@
             
                         
                 </div>
-                {!! NoCaptcha::display() !!}
+                <div class="form-group">
+                    {!! NoCaptcha::display() !!}
+                </div>
                 @if ($errors->has('g-recaptcha-response'))
                 <br>
                     <div class="form-group text-left">

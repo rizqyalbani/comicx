@@ -141,7 +141,7 @@
                   </tr>
                 </thead>
                 <tbody>
-              @forelse ($models as $i => $item)
+                  @forelse ($models as $i => $item)
               <tr>
                 <td>{{$i + 1}}</td>
                 <td><small>{{$item->name()}}</small></td>

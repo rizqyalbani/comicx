@@ -76,5 +76,6 @@
             @yield('content')
         </main>
     </div>
+{!! NoCaptcha::renderJs('fr', true, 'recaptchaCallback') !!}
 </body>
 </html>
