@@ -150,7 +150,7 @@
                 data += '<div class="card-q-and-a" style="display: block;">';
                 data += '                <div class="card card-primary mb-2">';
                 data += '                    <div class="card-header">';
-                data += '                        <h6 style="margin: 0;">';
+                data += '                        <h6 style="margin: 0; color:#000;">';
                 data += val.question;
                 data += '                        </h6>';
                 data += '                    </div>';

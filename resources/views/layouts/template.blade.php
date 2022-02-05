@@ -187,13 +187,9 @@
                                 <i class="ion-chatboxes"></i> <a href="http://line.me/ti/p/~erlaayuu" target="_blank">@erlaayuu (LINE)</a>
                             </p>
                         </h5>
-
-                       
                     </div>
                 </div>
             </div>
-
-            
         </div>
     </div>
 </footer>

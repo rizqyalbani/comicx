@@ -366,6 +366,7 @@
             </h3>
         </div>
         <div class="text-center">
+
             @if ($sponsor_utama->count() > 0)
             <div class="row justify-content-center ">
                 @foreach ($sponsor_utama as $item)
@@ -387,7 +388,7 @@
             </div>
                 <p style="text-align:left;">Slot tersedia</p>
             @endforelse
-        
+
         </div>
     </div>
     <br>
@@ -408,7 +409,7 @@
 
                 <p style="text-align:left;">Slot tersedia</p>
             @endforelse
-            
+       
         </div>
     </div>
 </section>
