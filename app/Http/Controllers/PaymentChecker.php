@@ -118,9 +118,13 @@ class PaymentChecker extends Controller
         // dd($id_user);
         $data = Competitor::where('user_id', $id_user)->where('competitor_status', 0)->Where('delete_status', 1)->first();
         // dd($data->user_id);
-        $data->competitorAuth->first();
-        $dataAuth = $data->competitorAuth->first();
+        $dataAuth = $data->competitorAuth;
         $dataDetail = $data->competitorDetail->first();
+
+        if ($dataAuth !== null) {
+            $dataAuth->first();
+        }
+        
         if ($data) {
             $time = Carbon::now();
             $now = $time->toDateTimeString();
