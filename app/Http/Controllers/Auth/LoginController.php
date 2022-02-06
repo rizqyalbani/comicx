@@ -47,7 +47,7 @@ class LoginController extends Controller
         $this->validate($request, [
             'email'           => 'required|max:255|email',
             'password'           => 'required',
-            // 'g-recaptcha-response'  => 'required|captcha',
+            'g-recaptcha-response'  => 'required|captcha',
         ]);
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->intended($this->redirectTo);
