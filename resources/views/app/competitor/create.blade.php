@@ -36,12 +36,12 @@
               <br>
               <select class="js-example-basic-single form-control select2 competition" id="comp" name="competition">
                 @foreach ($competition as $item)
-                    @if($item->competitor->count() < $item->quota)
+                    @if($item->competitor->count() <= $item->quota && $item->competitor->count() < $item->quota)
                     <option data-class="{{$item->class}}" data-gender="{{$item->competition_gender_id}}"  data-min-member="{{$item->min_member}}" data-max-member="{{$item->member}}" @if($item->competitionType)  data-url="{{route('competition.detail', $item->competitionType->slug)}}" @endif value="{{$item->id}}">{{$item->name()}}</option>
                     @endif
                 @endforeach
               </select>
-             
+              
               <div id="detail-lomba" class="mt-2">
                 
                 <a href="">Lihat detail lomba</a>

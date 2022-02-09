@@ -154,5 +154,4 @@ class CompetitionCategory extends Model
         $max = explode(',', $this->class);
         return end($max);
     }
-
 }
