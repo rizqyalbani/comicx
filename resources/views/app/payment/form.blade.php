@@ -25,8 +25,12 @@
                     <hr>
                 @empty
                     Belum ada tagihan <br>
-
-                    <a href="{{route('app.competitor.create')}}" class="mt-1 btn btn-success btn-sm">Tambah Peserta</a>
+                    {{-- {{dd(now()->toDateTimeString())}} --}}
+                    @if (now()->toDateTimeString() < "2022-02-10 23:59")
+                        <a href="{{route('app.competitor.create')}}" class="mt-1 btn btn-success btn-sm">Tambah Peserta</a>
+                    @else
+                        <span href="{{route('app.competitor.create')}}" class="mt-1 btn btn-danger btn-sm">Pendaftaran Telah ditutup, pada: 23.59</span>
+                    @endif
                 @endforelse
             </div>
         </div>

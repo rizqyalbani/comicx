@@ -8,12 +8,23 @@
 <a href="/home" class="mb-2 d-block"><small><i class="fa fa-arrow-left"></i> Kembali</small></a>
 @endsection
 @section('content')
-<a href="{{route('app.competitor.create')}}" class="btn btn-primary btn-icon-split shadow">
+
+@if (now()->toDateTimeString() < "2022-02-10 23:59")
+  <a href="{{route('app.competitor.create')}}" class="btn btn-primary btn-icon-split shadow">
     <span class="icon text-white-50">
       <i class="fas fa-plus"></i>
     </span>
     <span class="text">@if($models->count() < 1)Yuk, Daftar Lomba @else Yuk, Daftar Lomba Lagi @endif</span>
-</a>
+  </a>
+@else
+  <span class="btn btn-danger btn-icon-split shadow">
+    <span class="icon text-white-50">
+      <i class="fas fa-minus"></i>
+    </span>
+    <span class="text">Pendaftaran Telah ditutup pada: 23.59</span>
+  </span>
+@endif
+
 <br><br>
 <div class="card shadow mb-4">
 

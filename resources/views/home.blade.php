@@ -19,41 +19,65 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-3 col-md-6 mb-2">
-      <div class="card border-left-primary h-100 py-2">
-        <div class="card-body">
-        <a href="{{route('app.competitor.create')}}">
-            <div class="row no-gutters align-items-center">
-              <div class="col mr-2">
-                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><span class="badge badge-primary">1</span> Pilih</div>
-                <div class="h5 mb-0 font-weight-bold text-gray-800">Perlombaan</div>
-              </div>
-              <div class="col-auto">
-                <i class="fas fa-trophy fa-2x text-gray-300"></i>
-              </div>
+    @if (now()->toDateTimeString() < "2022-02-10 23:59")
+      {{-- belum ditutup --}}
+        <div class="col-xl-3 col-md-6 mb-2">
+          <div class="card border-left-primary h-100 py-2">
+            <div class="card-body">
+            <a href="{{route('app.competitor.create')}}">
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1"><span class="badge badge-primary">1</span> Pilih</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Perlombaan</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-trophy fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </a>
             </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-md-6 mb-2">
-        <div class="card border-left-warning h-100 py-2">
-          <div class="card-body">
-          <a href="{{route('app.payment.create')}}">
-              <div class="row no-gutters align-items-center">
-                <div class="col mr-2">
-                  <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><span class="badge badge-warning">2</span>  Lakukan</div>
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">Pembayaran</div>
-                </div>
-                <div class="col-auto">
-                  <i class="fas fa-wallet fa-2x text-gray-300"></i>
-                </div>
-              </div>
-            </a>
           </div>
         </div>
-      </div>
+        
+        <div class="col-xl-3 col-md-6 mb-2">
+            <div class="card border-left-warning h-100 py-2">
+              <div class="card-body">
+              <a href="{{route('app.payment.create')}}">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1"><span class="badge badge-warning">2</span>  Lakukan</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">Pembayaran</div>
+                    </div>
+                    <div class="col-auto">
+                      <i class="fas fa-wallet fa-2x text-gray-300"></i>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+      {{-- end belum ditutup --}}
+    @else
+      {{-- penutupan --}}
+        <div class="col-xl-6 col-md-6 mb-2">
+          <div class="card border-left-danger h-100 py-2">
+            <div class="card-body">
+            <span>
+                <div class="row no-gutters align-items-center">
+                  <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Ditutup</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">Pendaftaran Perlombaan telah ditutup pada pukul: 23.59</div>
+                  </div>
+                  <div class="col-auto">
+                    <i class="fas fa-trophy fa-2x text-gray-300"></i>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>
+        </div>
+      {{-- end penutupan --}}
+    @endif
 
       <div class="col-xl-3 col-md-6 mb-2">
         <div class="card border-left-success h-100 py-2">
