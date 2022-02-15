@@ -44,7 +44,7 @@
             <div class="col-12">
                 <div class="inner_cover_content">
                     <h3>
-                       Username Zoom Lomba COMIC IX
+                       Username Zoom Lomba COMIC X
                     </h3>
                 </div>
             </div>
@@ -53,7 +53,7 @@
         <div class="breadcrumbs">
             <ul>
                 <li><a href="/">Beranda</a>  |   </li>
-                <li><span>Username Zoom Lomba COMIC IX</span></li>
+                <li><span>Username Zoom Lomba COMIC X</span></li>
             </ul>
         </div>
     </div>

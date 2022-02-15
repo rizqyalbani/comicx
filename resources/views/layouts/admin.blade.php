@@ -487,6 +487,18 @@
       </div>
     </div>
   </div>
+    @if (now()->toDateTimeString() > "2022-02-17 00:00:00" && now()->toDateTimeString() <= "2022-02-18 20:00:00")        
+    <div class="alert alert-light alert-dismissible fade show notif-lomba pr-0 p-3" role="alert">
+      <h5 class="card-title mb-0 text-center mt-2">Pengumuman</h5>
+      <p class="card-text text-center">Batas Akhir Pengumpulan Karya <br> 18 Februari 2022, 20.00 WITA </p>
+      <h3 id="countdown-popup" class="text-center mb-0 text-center"></h3>
+      <a href="" class="btn btn-primary text-center d-block m-2">Kumpul Karya!</a>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    @endif
+
   <!-- Bootstrap core JavaScript-->
   <script src="/admin/vendor/jquery/jquery.min.js"></script>
   <script src="/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -496,11 +508,23 @@
 
   <!-- Custom scripts for all pages-->
   <script src="/admin/js/sb-admin-2.min.js"></script>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="{{url('assets/js/jquery.countdown.min.js')}}"></script>
+
   @yield('script')
 </body>
 
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  $("#countdown-popup").countdown("2022/02/18 20:00:00", function(event) {
+        console.log(event.offset.totalHours);
+        $(this).html(
+            event.strftime('<div>%D<span class="d-inline"></span></div>:<div class="d-inline" >%H<span></span></div>:<div>%M<span></span></div>:<div>%S<span></span></div>')
+        );
+      });
+</script>
 
 <script>
 

@@ -7,10 +7,11 @@
 @section('content')
 <div class="row">
     <div class="col-lg-12">
-      @if (now()->toDateTimeString() < "2022-02-16 23:59")
-        <div class="row align-items-center" style="height: 300px" >
-          <div class="col-lg-12">
+      @if (now()->toDateTimeString() <= "2022-02-16 23:59")
+        <div class="row align-items-center" style="min-height: 500px" >
+          <div class="col-lg-12 waiting-upload">
             <h1 class="text-center text-white font-weight-bold">Menunggu Waktu Pengumpulan Karya</h1>
+            <h4 class="text-center text-white font-weight-bold">17 Februari 2022 WITA</h4>
             <div id="countdown-karya" class="text-center mt-4"></div>
           </div>
         </div>
@@ -78,12 +79,11 @@
         window.location = $(this).find('option:selected').val();
       });
 
-      $("#countdown-karya")
-    .countdown("2022/02/17", function(event) {
+      $("#countdown-karya").countdown("2022/02/17", function(event) {
         $(this).html(
             event.strftime('<div>%D <span class="d-inline"> Hari</span></div>  <div class="d-inline" >%H<span> Jam</span></div> <div>%M<span> Menit</span></div> <div>%S<span> Detik</span></div>')
         );
-    });
+      });
 
     </script>
 @endsection
