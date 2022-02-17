@@ -492,7 +492,7 @@
       <h5 class="card-title mb-0 text-center mt-2">Pengumuman</h5>
       <p class="card-text text-center">Batas Akhir Pengumpulan Karya <br> 18 Februari 2022, 20.00 WITA </p>
       <h3 id="countdown-popup" class="text-center mb-0 text-center"></h3>
-      <a href="" class="btn btn-primary text-center d-block m-2">Kumpul Karya!</a>
+      <a href="{{url('app/upload')}}" class="btn btn-primary text-center d-block m-2">Kumpul Karya!</a>
       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>

@@ -15,6 +15,13 @@
             <div id="countdown-karya" class="text-center mt-4"></div>
           </div>
         </div>
+      @elseif (now()->toDateTimeString() >= '2022-02-18 20:00' )
+        <div class="row align-items-center" style="min-height: 500px" >
+          <div class="col-lg-12 waiting-upload">
+            <h1 class="text-center text-white font-weight-bold">Pengumpulan karya telah ditutup</h1>
+            <h4 class="text-center text-white font-weight-bold">18 Februari 2022, 20.00 WITA</h4>
+          </div>
+        </div>
       @else
         @if($models->count() < 1)
           <div class="row">
